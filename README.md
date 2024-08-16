@@ -1,4 +1,4 @@
-VHDL Projects and Exercises - NPTEL Workshop, IIT Bombay
+<h1>VHDL Projects and Exercises - NPTEL Workshop, IIT Bombay</h1>
 This repository contains VHDL codes developed during the NPTEL workshop on Digital System Design at IIT Bombay in June 2024. It includes problems, homework assignments, quizzes, and a final project, all aimed at enhancing understanding and practical skills in VHDL.
 
 Contents:
