@@ -1,12 +1,4 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>VHDL Projects and Exercises - NPTEL Workshop, IIT Bombay</title>
-</head>
-<body>
-    <h1>VHDL Projects and Exercises - NPTEL Workshop, IIT Bombay</h1>
+ <h1>VHDL Projects and Exercises - NPTEL Workshop, IIT Bombay</h1>
     <p>This repository contains VHDL codes developed during the NPTEL workshop on Digital System Design at IIT Bombay in June 2024. It includes problems, homework assignments, quizzes, and a final project, all aimed at enhancing understanding and practical skills in VHDL.</p>
     <h2>Contents:</h2>
     <ul>
@@ -27,5 +19,3 @@
         <li>Explore and run the VHDL codes using your preferred VHDL simulator.</li>
         <li>Use the solutions as a reference for your own VHDL projects or studies.</li>
     </ul>
-</body>
-</html>
