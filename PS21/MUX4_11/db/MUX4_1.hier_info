@@ -1,0 +1,42 @@
+|DUT
+input_vector[0] => MUX4_1:dut_instance.s0
+input_vector[1] => MUX4_1:dut_instance.s1
+input_vector[2] => MUX4_1:dut_instance.i0
+input_vector[3] => MUX4_1:dut_instance.i1
+input_vector[4] => MUX4_1:dut_instance.i2
+input_vector[5] => MUX4_1:dut_instance.i3
+output_vector[0] << MUX4_1:dut_instance.out1
+
+
+|DUT|MUX4_1:dut_instance
+i0 => MUX2_1:M1.in0
+i1 => MUX2_1:M1.in1
+i2 => MUX2_1:M2.in0
+i3 => MUX2_1:M2.in1
+s0 => MUX2_1:M1.sl
+s0 => MUX2_1:M2.sl
+s1 => MUX2_1:M3.sl
+out1 <= MUX2_1:M3.out1
+
+
+|DUT|MUX4_1:dut_instance|MUX2_1:M1
+in0 => out1.DATAB
+in1 => out1.DATAA
+sl => out1.OUTPUTSELECT
+out1 <= out1.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|MUX4_1:dut_instance|MUX2_1:M2
+in0 => out1.DATAB
+in1 => out1.DATAA
+sl => out1.OUTPUTSELECT
+out1 <= out1.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|MUX4_1:dut_instance|MUX2_1:M3
+in0 => out1.DATAB
+in1 => out1.DATAA
+sl => out1.OUTPUTSELECT
+out1 <= out1.DB_MAX_OUTPUT_PORT_TYPE
+
+

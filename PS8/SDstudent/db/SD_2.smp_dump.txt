@@ -1,0 +1,11 @@
+
+State Machine - |DUT|SD_2:dut_instance|y_p
+Name y_p.s7 y_p.s6 y_p.s5 y_p.s4 y_p.s3 y_p.s2 y_p.s1 y_p.rst 
+y_p.rst 0 0 0 0 0 0 0 0 
+y_p.s1 0 0 0 0 0 0 1 1 
+y_p.s2 0 0 0 0 0 1 0 1 
+y_p.s3 0 0 0 0 1 0 0 1 
+y_p.s4 0 0 0 1 0 0 0 1 
+y_p.s5 0 0 1 0 0 0 0 1 
+y_p.s6 0 1 0 0 0 0 0 1 
+y_p.s7 1 0 0 0 0 0 0 1 

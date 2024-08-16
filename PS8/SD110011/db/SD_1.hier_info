@@ -1,0 +1,37 @@
+|DUT
+input_vector[0] => SD_1:dut_instance.clock
+input_vector[1] => SD_1:dut_instance.reset
+output_vector[0] << SD_1:dut_instance.y
+
+
+|DUT|SD_1:dut_instance
+reset => dff_reset:FF1.reset
+reset => dff_reset:FF2.reset
+reset => dff_set:FF3.set
+clock => dff_reset:FF1.clock
+clock => dff_reset:FF2.clock
+clock => dff_set:FF3.clock
+y <= dff_set:FF3.Q
+
+
+|DUT|SD_1:dut_instance|dff_reset:FF1
+D => Q~reg0.DATAIN
+clock => Q~reg0.CLK
+reset => Q~reg0.ACLR
+Q <= Q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|SD_1:dut_instance|dff_reset:FF2
+D => Q~reg0.DATAIN
+clock => Q~reg0.CLK
+reset => Q~reg0.ACLR
+Q <= Q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|SD_1:dut_instance|dff_set:FF3
+D => Q~reg0.DATAIN
+clock => Q~reg0.CLK
+set => Q~reg0.PRESET
+Q <= Q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+

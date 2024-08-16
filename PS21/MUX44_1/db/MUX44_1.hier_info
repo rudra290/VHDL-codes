@@ -1,0 +1,184 @@
+|DUT
+input_vector[0] => MUX44_1:dut_instance.s0
+input_vector[1] => MUX44_1:dut_instance.s1
+input_vector[2] => MUX44_1:dut_instance.a0
+input_vector[3] => MUX44_1:dut_instance.a1
+input_vector[4] => MUX44_1:dut_instance.a2
+input_vector[5] => MUX44_1:dut_instance.a3
+input_vector[6] => MUX44_1:dut_instance.b0
+input_vector[7] => MUX44_1:dut_instance.b1
+input_vector[8] => MUX44_1:dut_instance.b2
+input_vector[9] => MUX44_1:dut_instance.b3
+input_vector[10] => MUX44_1:dut_instance.c0
+input_vector[11] => MUX44_1:dut_instance.c1
+input_vector[12] => MUX44_1:dut_instance.c2
+input_vector[13] => MUX44_1:dut_instance.c3
+input_vector[14] => MUX44_1:dut_instance.d0
+input_vector[15] => MUX44_1:dut_instance.d1
+input_vector[16] => MUX44_1:dut_instance.d2
+input_vector[17] => MUX44_1:dut_instance.d3
+output_vector[0] << MUX44_1:dut_instance.y0
+output_vector[1] << MUX44_1:dut_instance.y1
+output_vector[2] << MUX44_1:dut_instance.y2
+output_vector[3] << MUX44_1:dut_instance.y3
+
+
+|DUT|MUX44_1:dut_instance
+a0 => MUX4_1:M1.i0
+a1 => MUX4_1:M2.i0
+a2 => MUX4_1:M3.i0
+a3 => MUX4_1:M4.i0
+b0 => MUX4_1:M1.i1
+b1 => MUX4_1:M2.i1
+b2 => MUX4_1:M3.i1
+b3 => MUX4_1:M4.i1
+c0 => MUX4_1:M1.i2
+c1 => MUX4_1:M2.i2
+c2 => MUX4_1:M3.i2
+c3 => MUX4_1:M4.i2
+d0 => MUX4_1:M1.i3
+d1 => MUX4_1:M2.i3
+d2 => MUX4_1:M3.i3
+d3 => MUX4_1:M4.i3
+s0 => MUX4_1:M1.s0
+s0 => MUX4_1:M2.s0
+s0 => MUX4_1:M3.s0
+s0 => MUX4_1:M4.s0
+s1 => MUX4_1:M1.s1
+s1 => MUX4_1:M2.s1
+s1 => MUX4_1:M3.s1
+s1 => MUX4_1:M4.s1
+y0 <= MUX4_1:M1.out1
+y1 <= MUX4_1:M2.out1
+y2 <= MUX4_1:M3.out1
+y3 <= MUX4_1:M4.out1
+
+
+|DUT|MUX44_1:dut_instance|MUX4_1:M1
+i0 => MUX2_1:M1.in0
+i1 => MUX2_1:M1.in1
+i2 => MUX2_1:M2.in0
+i3 => MUX2_1:M2.in1
+s0 => MUX2_1:M1.sl
+s0 => MUX2_1:M2.sl
+s1 => MUX2_1:M3.sl
+out1 <= MUX2_1:M3.out1
+
+
+|DUT|MUX44_1:dut_instance|MUX4_1:M1|MUX2_1:M1
+in0 => out1.DATAB
+in1 => out1.DATAA
+sl => out1.OUTPUTSELECT
+out1 <= out1.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|MUX44_1:dut_instance|MUX4_1:M1|MUX2_1:M2
+in0 => out1.DATAB
+in1 => out1.DATAA
+sl => out1.OUTPUTSELECT
+out1 <= out1.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|MUX44_1:dut_instance|MUX4_1:M1|MUX2_1:M3
+in0 => out1.DATAB
+in1 => out1.DATAA
+sl => out1.OUTPUTSELECT
+out1 <= out1.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|MUX44_1:dut_instance|MUX4_1:M2
+i0 => MUX2_1:M1.in0
+i1 => MUX2_1:M1.in1
+i2 => MUX2_1:M2.in0
+i3 => MUX2_1:M2.in1
+s0 => MUX2_1:M1.sl
+s0 => MUX2_1:M2.sl
+s1 => MUX2_1:M3.sl
+out1 <= MUX2_1:M3.out1
+
+
+|DUT|MUX44_1:dut_instance|MUX4_1:M2|MUX2_1:M1
+in0 => out1.DATAB
+in1 => out1.DATAA
+sl => out1.OUTPUTSELECT
+out1 <= out1.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|MUX44_1:dut_instance|MUX4_1:M2|MUX2_1:M2
+in0 => out1.DATAB
+in1 => out1.DATAA
+sl => out1.OUTPUTSELECT
+out1 <= out1.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|MUX44_1:dut_instance|MUX4_1:M2|MUX2_1:M3
+in0 => out1.DATAB
+in1 => out1.DATAA
+sl => out1.OUTPUTSELECT
+out1 <= out1.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|MUX44_1:dut_instance|MUX4_1:M3
+i0 => MUX2_1:M1.in0
+i1 => MUX2_1:M1.in1
+i2 => MUX2_1:M2.in0
+i3 => MUX2_1:M2.in1
+s0 => MUX2_1:M1.sl
+s0 => MUX2_1:M2.sl
+s1 => MUX2_1:M3.sl
+out1 <= MUX2_1:M3.out1
+
+
+|DUT|MUX44_1:dut_instance|MUX4_1:M3|MUX2_1:M1
+in0 => out1.DATAB
+in1 => out1.DATAA
+sl => out1.OUTPUTSELECT
+out1 <= out1.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|MUX44_1:dut_instance|MUX4_1:M3|MUX2_1:M2
+in0 => out1.DATAB
+in1 => out1.DATAA
+sl => out1.OUTPUTSELECT
+out1 <= out1.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|MUX44_1:dut_instance|MUX4_1:M3|MUX2_1:M3
+in0 => out1.DATAB
+in1 => out1.DATAA
+sl => out1.OUTPUTSELECT
+out1 <= out1.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|MUX44_1:dut_instance|MUX4_1:M4
+i0 => MUX2_1:M1.in0
+i1 => MUX2_1:M1.in1
+i2 => MUX2_1:M2.in0
+i3 => MUX2_1:M2.in1
+s0 => MUX2_1:M1.sl
+s0 => MUX2_1:M2.sl
+s1 => MUX2_1:M3.sl
+out1 <= MUX2_1:M3.out1
+
+
+|DUT|MUX44_1:dut_instance|MUX4_1:M4|MUX2_1:M1
+in0 => out1.DATAB
+in1 => out1.DATAA
+sl => out1.OUTPUTSELECT
+out1 <= out1.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|MUX44_1:dut_instance|MUX4_1:M4|MUX2_1:M2
+in0 => out1.DATAB
+in1 => out1.DATAA
+sl => out1.OUTPUTSELECT
+out1 <= out1.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|MUX44_1:dut_instance|MUX4_1:M4|MUX2_1:M3
+in0 => out1.DATAB
+in1 => out1.DATAA
+sl => out1.OUTPUTSELECT
+out1 <= out1.DB_MAX_OUTPUT_PORT_TYPE
+
+

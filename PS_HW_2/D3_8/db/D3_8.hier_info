@@ -1,0 +1,201 @@
+|DUT
+input_vector[0] => D3_8:dut_instance.e
+input_vector[1] => D3_8:dut_instance.i0
+input_vector[2] => D3_8:dut_instance.i1
+input_vector[3] => D3_8:dut_instance.i2
+output_vector[0] << D3_8:dut_instance.y0
+output_vector[1] << D3_8:dut_instance.y1
+output_vector[2] << D3_8:dut_instance.y2
+output_vector[3] << D3_8:dut_instance.y3
+output_vector[4] << D3_8:dut_instance.y4
+output_vector[5] << D3_8:dut_instance.y5
+output_vector[6] << D3_8:dut_instance.y6
+output_vector[7] << D3_8:dut_instance.y7
+
+
+|DUT|D3_8:dut_instance
+i0 => D2_4:D1.i0
+i0 => D2_4:D2.i0
+i1 => D2_4:D1.i1
+i1 => D2_4:D2.i1
+i2 => AND_2:A1.A
+i2 => INVERTER:INV1.A
+e => AND_2:A1.B
+e => AND_2:A2.B
+y0 <= D2_4:D1.d0
+y1 <= D2_4:D1.d1
+y2 <= D2_4:D1.d2
+y3 <= D2_4:D1.d3
+y4 <= D2_4:D2.d0
+y5 <= D2_4:D2.d1
+y6 <= D2_4:D2.d2
+y7 <= D2_4:D2.d3
+
+
+|DUT|D3_8:dut_instance|AND_2:A1
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|D3_8:dut_instance|INVERTER:INV1
+A => Y.DATAIN
+Y <= A.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|D3_8:dut_instance|AND_2:A2
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|D3_8:dut_instance|D2_4:D1
+i0 => INVERTER:N1.A
+i0 => AND_2:And2.A
+i0 => AND_2:And4.A
+i1 => INVERTER:N2.A
+i1 => AND_2:And3.B
+i1 => AND_2:And4.B
+e => AND_2:And1_1.B
+e => AND_2:And2_1.B
+e => AND_2:And3_1.B
+e => AND_2:And4_1.B
+d0 <= AND_2:And1_1.Y
+d1 <= AND_2:And2_1.Y
+d2 <= AND_2:And3_1.Y
+d3 <= AND_2:And4_1.Y
+
+
+|DUT|D3_8:dut_instance|D2_4:D1|INVERTER:N1
+A => Y.DATAIN
+Y <= A.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|D3_8:dut_instance|D2_4:D1|INVERTER:N2
+A => Y.DATAIN
+Y <= A.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|D3_8:dut_instance|D2_4:D1|AND_2:And1
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|D3_8:dut_instance|D2_4:D1|AND_2:And1_1
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|D3_8:dut_instance|D2_4:D1|AND_2:And2
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|D3_8:dut_instance|D2_4:D1|AND_2:And2_1
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|D3_8:dut_instance|D2_4:D1|AND_2:And3
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|D3_8:dut_instance|D2_4:D1|AND_2:And3_1
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|D3_8:dut_instance|D2_4:D1|AND_2:And4
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|D3_8:dut_instance|D2_4:D1|AND_2:And4_1
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|D3_8:dut_instance|D2_4:D2
+i0 => INVERTER:N1.A
+i0 => AND_2:And2.A
+i0 => AND_2:And4.A
+i1 => INVERTER:N2.A
+i1 => AND_2:And3.B
+i1 => AND_2:And4.B
+e => AND_2:And1_1.B
+e => AND_2:And2_1.B
+e => AND_2:And3_1.B
+e => AND_2:And4_1.B
+d0 <= AND_2:And1_1.Y
+d1 <= AND_2:And2_1.Y
+d2 <= AND_2:And3_1.Y
+d3 <= AND_2:And4_1.Y
+
+
+|DUT|D3_8:dut_instance|D2_4:D2|INVERTER:N1
+A => Y.DATAIN
+Y <= A.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|D3_8:dut_instance|D2_4:D2|INVERTER:N2
+A => Y.DATAIN
+Y <= A.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|D3_8:dut_instance|D2_4:D2|AND_2:And1
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|D3_8:dut_instance|D2_4:D2|AND_2:And1_1
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|D3_8:dut_instance|D2_4:D2|AND_2:And2
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|D3_8:dut_instance|D2_4:D2|AND_2:And2_1
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|D3_8:dut_instance|D2_4:D2|AND_2:And3
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|D3_8:dut_instance|D2_4:D2|AND_2:And3_1
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|D3_8:dut_instance|D2_4:D2|AND_2:And4
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|D3_8:dut_instance|D2_4:D2|AND_2:And4_1
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+

@@ -1,0 +1,216 @@
+# Reading pref.tcl
+# do Quiz_run_msim_rtl_vhdl.do
+# if {[file exists rtl_work]} {
+# 	vdel -lib rtl_work -all
+# }
+# vlib rtl_work
+# vmap work rtl_work
+# Model Technology ModelSim - Intel FPGA Edition vmap 2020.1 Lib Mapping Utility 2020.02 Feb 28 2020
+# vmap work rtl_work 
+# Copying C:/intelFPGA_lite/20.1/modelsim_ase/win32aloem/../modelsim.ini to modelsim.ini
+# Modifying modelsim.ini
+# 
+# vcom -93 -work work {C:/Users/rudra/VHDL_Codes/Quiz2/MUX2_1.vhd}
+# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 11:05:39 on Jun 13,2024
+# vcom -reportprogress 300 -93 -work work C:/Users/rudra/VHDL_Codes/Quiz2/MUX2_1.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity MUX2_1
+# -- Compiling architecture Body1 of MUX2_1
+# End time: 11:05:39 on Jun 13,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vcom -93 -work work {C:/Users/rudra/VHDL_Codes/Quiz2/Gates.vhdl}
+# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 11:05:39 on Jun 13,2024
+# vcom -reportprogress 300 -93 -work work C:/Users/rudra/VHDL_Codes/Quiz2/Gates.vhdl 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling package Gates
+# -- Compiling entity INVERTER
+# -- Compiling architecture Equations of INVERTER
+# -- Compiling entity AND_2
+# -- Compiling architecture Equations of AND_2
+# -- Compiling entity NAND_2
+# -- Compiling architecture Equations of NAND_2
+# -- Compiling entity OR_2
+# -- Compiling architecture Equations of OR_2
+# -- Compiling entity NOR_2
+# -- Compiling architecture Equations of NOR_2
+# -- Compiling entity XOR_2
+# -- Compiling architecture Equations of XOR_2
+# -- Compiling entity XNOR_2
+# -- Compiling architecture Equations of XNOR_2
+# -- Compiling entity HALF_ADDER
+# -- Compiling architecture Equations of HALF_ADDER
+# End time: 11:05:39 on Jun 13,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vcom -93 -work work {C:/Users/rudra/VHDL_Codes/Quiz2/DUT.vhdl}
+# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 11:05:39 on Jun 13,2024
+# vcom -reportprogress 300 -93 -work work C:/Users/rudra/VHDL_Codes/Quiz2/DUT.vhdl 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity DUT
+# -- Compiling architecture DutWrap of DUT
+# End time: 11:05:39 on Jun 13,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vcom -93 -work work {C:/Users/rudra/VHDL_Codes/Quiz2/SHIFTR.vhd}
+# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 11:05:39 on Jun 13,2024
+# vcom -reportprogress 300 -93 -work work C:/Users/rudra/VHDL_Codes/Quiz2/SHIFTR.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity bit_reversal
+# -- Compiling architecture body_BR of bit_reversal
+# -- Loading package Gates
+# -- Compiling entity SHIFTR
+# -- Compiling architecture body_SR of SHIFTR
+# End time: 11:05:39 on Jun 13,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vcom -93 -work work {C:/Users/rudra/VHDL_Codes/Quiz2/XOR_PS.vhd}
+# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 11:05:39 on Jun 13,2024
+# vcom -reportprogress 300 -93 -work work C:/Users/rudra/VHDL_Codes/Quiz2/XOR_PS.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package Gates
+# -- Compiling package XOR_PS1
+# -- Compiling entity XOR_PS
+# -- Compiling architecture body1 of XOR_PS
+# End time: 11:05:39 on Jun 13,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vcom -93 -work work {C:/Users/rudra/VHDL_Codes/Quiz2/OR_PS.vhd}
+# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 11:05:39 on Jun 13,2024
+# vcom -reportprogress 300 -93 -work work C:/Users/rudra/VHDL_Codes/Quiz2/OR_PS.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package Gates
+# -- Compiling package OR_PS1
+# -- Compiling entity OR_PS
+# -- Compiling architecture body1 of OR_PS
+# End time: 11:05:39 on Jun 13,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vcom -93 -work work {C:/Users/rudra/VHDL_Codes/Quiz2/AND_PS.vhd}
+# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 11:05:39 on Jun 13,2024
+# vcom -reportprogress 300 -93 -work work C:/Users/rudra/VHDL_Codes/Quiz2/AND_PS.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package Gates
+# -- Compiling package AND_PS1
+# -- Compiling entity AND_PS
+# -- Compiling architecture body1 of AND_PS
+# End time: 11:05:40 on Jun 13,2024, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 0
+# vcom -93 -work work {C:/Users/rudra/VHDL_Codes/Quiz2/Quiz.vhd}
+# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 11:05:40 on Jun 13,2024
+# vcom -reportprogress 300 -93 -work work C:/Users/rudra/VHDL_Codes/Quiz2/Quiz.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package Gates
+# -- Compiling entity Quiz
+# -- Compiling architecture body1 of Quiz
+# End time: 11:05:40 on Jun 13,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vcom -93 -work work {C:/Users/rudra/VHDL_Codes/Quiz2/HA.vhd}
+# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 11:05:40 on Jun 13,2024
+# vcom -reportprogress 300 -93 -work work C:/Users/rudra/VHDL_Codes/Quiz2/HA.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package Gates
+# -- Loading package XOR_PS1
+# -- Loading package AND_PS1
+# -- Compiling package HA1
+# -- Compiling entity HA
+# -- Compiling architecture body1 of HA
+# End time: 11:05:40 on Jun 13,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vcom -93 -work work {C:/Users/rudra/VHDL_Codes/Quiz2/FA.vhd}
+# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 11:05:40 on Jun 13,2024
+# vcom -reportprogress 300 -93 -work work C:/Users/rudra/VHDL_Codes/Quiz2/FA.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package Gates
+# -- Loading package XOR_PS1
+# -- Loading package AND_PS1
+# -- Loading package HA1
+# -- Loading package OR_PS1
+# -- Compiling entity FA
+# -- Compiling architecture body1 of FA
+# End time: 11:05:40 on Jun 13,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# 
+# vcom -93 -work work {C:/Users/rudra/VHDL_Codes/Quiz2/Testbench.vhdl}
+# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 11:05:40 on Jun 13,2024
+# vcom -reportprogress 300 -93 -work work C:/Users/rudra/VHDL_Codes/Quiz2/Testbench.vhdl 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity Testbench
+# -- Compiling architecture Behave of Testbench
+# End time: 11:05:40 on Jun 13,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# 
+# vsim -t 1ps -L altera -L lpm -L sgate -L altera_mf -L altera_lnsim -L maxv -L rtl_work -L work -voptargs="+acc"  Testbench
+# vsim -t 1ps -L altera -L lpm -L sgate -L altera_mf -L altera_lnsim -L maxv -L rtl_work -L work -voptargs=""+acc"" Testbench 
+# Start time: 11:05:40 on Jun 13,2024
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading work.testbench(behave)
+# Loading work.dut(dutwrap)
+# Loading work.gates
+# Loading work.quiz(body1)
+# Loading work.xor_2(equations)
+# Loading work.and_2(equations)
+# Loading work.inverter(equations)
+# Loading work.shiftr(body_sr)
+# Loading work.bit_reversal(body_br)
+# Loading work.mux2_1(body1)
+# Loading work.xor_ps1
+# Loading work.and_ps1
+# Loading work.ha1
+# Loading work.or_ps1
+# Loading work.fa(body1)
+# Loading work.ha(body1)
+# Loading work.xor_ps(body1)
+# Loading work.nand_2(equations)
+# Loading work.and_ps(body1)
+# Loading work.or_ps(body1)
+# 
+# add wave *
+# view structure
+# .main_pane.structure.interior.cs.body.struct
+# view signals
+# .main_pane.objects.interior.cs.body.tree
+# run -all
+# ** Note: SUCCESS, all tests passed.
+#    Time: 1624 ns  Iteration: 0  Instance: /testbench
+add wave -position insertpoint  \
+sim:/testbench/dut_instance/dut_instance/mm1
+restart
+run -all
+# GetModuleFileName: The specified module could not be found.
+# 
+# 
+# ** Note: SUCCESS, all tests passed.
+#    Time: 1624 ns  Iteration: 0  Instance: /testbench
+run -all
+# End time: 11:56:59 on Jun 13,2024, Elapsed time: 0:51:19
+# Errors: 0, Warnings: 0

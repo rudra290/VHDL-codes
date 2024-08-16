@@ -1,0 +1,38 @@
+|DUT
+input_vector[0] => MUX_21:dut_instance.sl
+input_vector[1] => MUX_21:dut_instance.in0
+input_vector[2] => MUX_21:dut_instance.in1
+output_vector[0] << MUX_21:dut_instance.out1
+
+
+|DUT|MUX_21:dut_instance
+in0 => AND_2:and1.B
+in1 => AND_2:and2.B
+sl => INVERTER:inv.A
+sl => AND_2:and2.A
+out1 <= OR_2:or1.Y
+
+
+|DUT|MUX_21:dut_instance|INVERTER:inv
+A => Y.DATAIN
+Y <= A.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|MUX_21:dut_instance|AND_2:and1
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|MUX_21:dut_instance|AND_2:and2
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|MUX_21:dut_instance|OR_2:or1
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+

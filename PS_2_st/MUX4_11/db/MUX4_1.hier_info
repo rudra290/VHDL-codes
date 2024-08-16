@@ -1,0 +1,114 @@
+|DUT
+input_vector[0] => MUX4_1:dut_instance.s0
+input_vector[1] => MUX4_1:dut_instance.s1
+input_vector[2] => MUX4_1:dut_instance.i0
+input_vector[3] => MUX4_1:dut_instance.i1
+input_vector[4] => MUX4_1:dut_instance.i2
+input_vector[5] => MUX4_1:dut_instance.i3
+output_vector[0] << MUX4_1:dut_instance.out1
+
+
+|DUT|MUX4_1:dut_instance
+i0 => MUX_21:M1.in0
+i1 => MUX_21:M1.in1
+i2 => MUX_21:M2.in0
+i3 => MUX_21:M2.in1
+s0 => MUX_21:M1.sl
+s0 => MUX_21:M2.sl
+s1 => MUX_21:M3.sl
+out1 <= MUX_21:M3.out1
+
+
+|DUT|MUX4_1:dut_instance|MUX_21:M1
+in0 => AND_2:and1.B
+in1 => AND_2:and2.B
+sl => INVERTER:inv.A
+sl => AND_2:and2.A
+out1 <= OR_2:or1.Y
+
+
+|DUT|MUX4_1:dut_instance|MUX_21:M1|INVERTER:inv
+A => Y.DATAIN
+Y <= A.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|MUX4_1:dut_instance|MUX_21:M1|AND_2:and1
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|MUX4_1:dut_instance|MUX_21:M1|AND_2:and2
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|MUX4_1:dut_instance|MUX_21:M1|OR_2:or1
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|MUX4_1:dut_instance|MUX_21:M2
+in0 => AND_2:and1.B
+in1 => AND_2:and2.B
+sl => INVERTER:inv.A
+sl => AND_2:and2.A
+out1 <= OR_2:or1.Y
+
+
+|DUT|MUX4_1:dut_instance|MUX_21:M2|INVERTER:inv
+A => Y.DATAIN
+Y <= A.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|MUX4_1:dut_instance|MUX_21:M2|AND_2:and1
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|MUX4_1:dut_instance|MUX_21:M2|AND_2:and2
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|MUX4_1:dut_instance|MUX_21:M2|OR_2:or1
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|MUX4_1:dut_instance|MUX_21:M3
+in0 => AND_2:and1.B
+in1 => AND_2:and2.B
+sl => INVERTER:inv.A
+sl => AND_2:and2.A
+out1 <= OR_2:or1.Y
+
+
+|DUT|MUX4_1:dut_instance|MUX_21:M3|INVERTER:inv
+A => Y.DATAIN
+Y <= A.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|MUX4_1:dut_instance|MUX_21:M3|AND_2:and1
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|MUX4_1:dut_instance|MUX_21:M3|AND_2:and2
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|MUX4_1:dut_instance|MUX_21:M3|OR_2:or1
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+

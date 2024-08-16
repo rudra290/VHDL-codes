@@ -1,0 +1,91 @@
+library ieee;
+use ieee.std_logic_1164.all;
+library work;
+use work.Gates.all;
+
+-- n4_bit : for i in 0 to 7 generate
+--lsb: if i < 4 generate
+--b2: mux port map(I(0) => a(i), I(1) => a(i+4), S => b(2), Y => s(i));
+--end generate lsb;
+--msb: if i > 3 generate
+--b2: mux port map(I(0) => a(i), I(1) => '0', S => b(2), Y => s(i));
+--end generate msb;
+--end generate ;
+
+entity SHIFTR is
+port ( a : in std_logic_vector(7 downto 0);
+		 b : in std_logic_vector(2 downto 0);
+		 l : in std_logic;
+		 s : in std_logic_vector(7 downto 0) );
+end entity;
+
+architecture body1 of SHIFT is
+
+component MUX2_1 is
+  port (
+    in0, in1, sl : in std_logic;
+    out1 : out std_logic
+  );
+end component;
+
+	variable x : std_logic_vector(7 downto 0);
+	variable y : std_logic_vector(7 downto 0);
+
+begin 
+
+	process ( a,b,l,s,x,y)
+	begin
+	
+		if(l='0') then -- right sift
+			bit3 : for i in 0 to 7 generate
+					 lsb: if i < 4 generate
+					 Y2: MUX2_1 port map(in0 => a(i), in1 => a(i+4), sl => b(2), out1 => x(i));
+					 end generate lsb;
+					 msb: if i > 3 generate
+					 Y2: MUX2_1 port map(in0 => a(i), in1 => '0', sl => b(2), out1 => x(i));
+					 end generate msb;
+					 end generate ;
+			bit2 : for i in 0 to 7 generate
+					 lsb: if i < 2 generate
+					 Y2: MUX2_1 port map(in0 => x(i), in1 => x(i+2), sl => b(1), out1 => y(i));
+					 end generate lsb;
+					 msb: if i > 1 generate
+					 Y2: MUX2_1 port map(in0 => x(i), in1 => '0', sl => b(1), out1 => y(i));
+					 end generate msb;
+					 end generate ;
+			bit1 : for i in 0 to 7 generate
+					 lsb: if i < 1 generate
+					 Y2: MUX2_1 port map(in0 => y(i), in1 => y(i+1), sl => b(0), out1 => s(i));
+					 end generate lsb;
+					 msb: if i > 0 generate
+					 Y2: MUX2_1 port map(in0 => y(i), in1 => '0', sl => b(0), out1 => s(i));
+					 end generate msb;
+					 end generate ;
+		else
+			bit3 : for i in 0 to 7 generate
+					 lsb: if i > 3 generate
+					 Y2: MUX2_1 port map(in0 => a(i), in1 => a(i-4), sl => b(2), out1 => x(i));
+					 end generate lsb;
+					 msb: if i < 4 generate
+					 Y2: MUX2_1 port map(in0 => a(i), in1 => '0', sl => b(2), out1 => x(i));
+					 end generate msb;
+					 end generate ;
+			bit2 : for i in 0 to 7 generate
+					 lsb: if i > 1 generate
+					 Y2: MUX2_1 port map(in0 => x(i), in1 => x(i-2), sl => b(1), out1 => y(i));
+					 end generate lsb;
+					 msb: if i < 2 generate
+					 Y2: MUX2_1 port map(in0 => x(i), in1 => '0', sl => b(1), out1 => y(i));
+					 end generate msb;
+					 end generate ;
+			bit1 : for i in 0 to 7 generate
+					 lsb: if i < 0 generate
+					 Y2: MUX2_1 port map(in0 => y(i), in1 => y(i-1), sl => b(0), out1 => s(i));
+					 end generate lsb;
+					 msb: if i > 1 generate
+					 Y2: MUX2_1 port map(in0 => y(i), in1 => '0', sl => b(0), out1 => s(i));
+					 end generate msb;
+					 end generate ;
+		end if;
+		end process;
+end architecture;

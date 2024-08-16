@@ -1,0 +1,58 @@
+|DUT
+input_vector[0] => decorder:dut_instance.e
+input_vector[1] => decorder:dut_instance.inp[0]
+input_vector[2] => decorder:dut_instance.inp[1]
+input_vector[3] => decorder:dut_instance.inp[2]
+output_vector[0] <= decorder:dut_instance.oup[0]
+output_vector[1] <= decorder:dut_instance.oup[1]
+output_vector[2] <= decorder:dut_instance.oup[2]
+output_vector[3] <= decorder:dut_instance.oup[3]
+output_vector[4] <= decorder:dut_instance.oup[4]
+output_vector[5] <= decorder:dut_instance.oup[5]
+output_vector[6] <= decorder:dut_instance.oup[6]
+output_vector[7] <= decorder:dut_instance.oup[7]
+
+
+|DUT|decorder:dut_instance
+inp[0] => Equal0.IN2
+inp[0] => Equal1.IN2
+inp[0] => Equal2.IN1
+inp[0] => Equal3.IN2
+inp[0] => Equal4.IN1
+inp[0] => Equal5.IN2
+inp[0] => Equal6.IN0
+inp[0] => Equal7.IN2
+inp[1] => Equal0.IN1
+inp[1] => Equal1.IN1
+inp[1] => Equal2.IN2
+inp[1] => Equal3.IN1
+inp[1] => Equal4.IN0
+inp[1] => Equal5.IN0
+inp[1] => Equal6.IN2
+inp[1] => Equal7.IN1
+inp[2] => Equal0.IN0
+inp[2] => Equal1.IN0
+inp[2] => Equal2.IN0
+inp[2] => Equal3.IN0
+inp[2] => Equal4.IN2
+inp[2] => Equal5.IN1
+inp[2] => Equal6.IN1
+inp[2] => Equal7.IN0
+e => oup.OUTPUTSELECT
+e => oup.OUTPUTSELECT
+e => oup.OUTPUTSELECT
+e => oup.OUTPUTSELECT
+e => oup.OUTPUTSELECT
+e => oup.OUTPUTSELECT
+e => oup.OUTPUTSELECT
+e => oup.OUTPUTSELECT
+oup[0] <= oup.DB_MAX_OUTPUT_PORT_TYPE
+oup[1] <= oup.DB_MAX_OUTPUT_PORT_TYPE
+oup[2] <= oup.DB_MAX_OUTPUT_PORT_TYPE
+oup[3] <= oup.DB_MAX_OUTPUT_PORT_TYPE
+oup[4] <= oup.DB_MAX_OUTPUT_PORT_TYPE
+oup[5] <= oup.DB_MAX_OUTPUT_PORT_TYPE
+oup[6] <= oup.DB_MAX_OUTPUT_PORT_TYPE
+oup[7] <= oup.DB_MAX_OUTPUT_PORT_TYPE
+
+

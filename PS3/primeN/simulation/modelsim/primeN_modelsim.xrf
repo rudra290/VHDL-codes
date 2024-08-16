@@ -1,0 +1,17 @@
+vendor_name = ModelSim
+source_file = 1, C:/Users/rudra/VHDL Codes/PS3/primeN/Testbench.vhdl
+source_file = 1, C:/Users/rudra/VHDL Codes/PS3/primeN/Gates.vhdl
+source_file = 1, C:/Users/rudra/VHDL Codes/PS3/primeN/DUT.vhdl
+source_file = 1, C:/Users/rudra/VHDL Codes/PS3/primeN/primeN.vhd
+source_file = 1, c:/intelfpga_lite/20.1/quartus/libraries/vhdl/ieee/prmtvs_b.vhd
+source_file = 1, c:/intelfpga_lite/20.1/quartus/libraries/vhdl/ieee/prmtvs_p.vhd
+source_file = 1, c:/intelfpga_lite/20.1/quartus/libraries/vhdl/ieee/timing_b.vhd
+source_file = 1, c:/intelfpga_lite/20.1/quartus/libraries/vhdl/ieee/timing_p.vhd
+source_file = 1, C:/Users/rudra/VHDL Codes/PS3/primeN/db/primeN.cbx.xml
+design_name = DUT
+instance = comp, \input_vector[2]~I\, input_vector[2], DUT, 1
+instance = comp, \input_vector[3]~I\, input_vector[3], DUT, 1
+instance = comp, \input_vector[1]~I\, input_vector[1], DUT, 1
+instance = comp, \input_vector[0]~I\, input_vector[0], DUT, 1
+instance = comp, \dut_instance|OR3|Y~0\, dut_instance|OR3|Y~0, DUT, 1
+instance = comp, \output_vector[0]~I\, output_vector[0], DUT, 1

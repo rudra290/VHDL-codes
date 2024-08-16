@@ -1,0 +1,14 @@
+|DUT
+input_vector[0] => MUX2_1:dut_instance.sl
+input_vector[1] => MUX2_1:dut_instance.in0
+input_vector[2] => MUX2_1:dut_instance.in1
+output_vector[0] << MUX2_1:dut_instance.out1
+
+
+|DUT|MUX2_1:dut_instance
+in0 => out1.DATAB
+in1 => out1.DATAA
+sl => out1.OUTPUTSELECT
+out1 <= out1.DB_MAX_OUTPUT_PORT_TYPE
+
+

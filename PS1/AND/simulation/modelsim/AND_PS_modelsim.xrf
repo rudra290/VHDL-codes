@@ -1,0 +1,15 @@
+vendor_name = ModelSim
+source_file = 1, C:/Users/rudra/VHDL Codes/PS1/AND/Testbench.vhdl
+source_file = 1, C:/Users/rudra/VHDL Codes/PS1/AND/Gates.vhdl
+source_file = 1, C:/Users/rudra/VHDL Codes/PS1/AND/DUT.vhdl
+source_file = 1, C:/Users/rudra/VHDL Codes/PS1/AND/AND_PS.vhd
+source_file = 1, c:/intelfpga_lite/20.1/quartus/libraries/vhdl/ieee/prmtvs_b.vhd
+source_file = 1, c:/intelfpga_lite/20.1/quartus/libraries/vhdl/ieee/prmtvs_p.vhd
+source_file = 1, c:/intelfpga_lite/20.1/quartus/libraries/vhdl/ieee/timing_b.vhd
+source_file = 1, c:/intelfpga_lite/20.1/quartus/libraries/vhdl/ieee/timing_p.vhd
+source_file = 1, C:/Users/rudra/VHDL Codes/PS1/AND/db/AND_PS.cbx.xml
+design_name = DUT
+instance = comp, \input_vector[0]~I\, input_vector[0], DUT, 1
+instance = comp, \input_vector[1]~I\, input_vector[1], DUT, 1
+instance = comp, \dut_instance|NAND_01|Y~0\, dut_instance|NAND_01|Y~0, DUT, 1
+instance = comp, \output_vector[0]~I\, output_vector[0], DUT, 1

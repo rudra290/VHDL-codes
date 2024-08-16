@@ -1,0 +1,46 @@
+library ieee;
+use ieee.std_logic_1164.all;
+library work;
+use work.gates.all;
+use IEEE.NUMERIC_STD.ALL; 
+
+entity Fibonacci is
+port ( ip : in std_logic_vector(9 downto 0);
+		  y : out std_logic
+	   );
+end entity;
+
+architecture body1 of Fibonacci is
+
+begin 
+
+		process (ip)
+				variable op : std_logic;
+				variable p, q, r, : integer := 1;
+		begin
+		
+
+		
+			if ( unsigned(ip) < 1 ) then
+				op <= '1';
+			else
+			
+			while ( q < unsigned(ip) ) loop
+			r <= q;
+			q <= q + p;
+			p <= r;
+			end loop;
+			
+			end if;
+			
+			if ( unsigned(ip) = q ) then
+				op <= '1';
+			else 
+				op <= '0';
+			end if;
+			
+			y <= op;
+		end process;
+end architecture;
+		
+				

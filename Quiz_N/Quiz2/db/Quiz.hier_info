@@ -1,0 +1,1956 @@
+|TopLevel
+state_out[0] <= DUT:dut_instance.output_vector[7]
+state_out[1] <= v_jtag:u0.virtual_jtag_virtual_state_udr
+state_out[2] <= v_jtag:u0.virtual_jtag_virtual_state_sdr
+state_out[3] <= v_jtag:u0.virtual_jtag_virtual_state_cdr
+state_out[4] <= v_jtag:u0.virtual_jtag_jtag_state_e1dr
+
+
+|TopLevel|v_jtag:u0
+tck_clk <= sld_virtual_jtag:virtual_jtag_0.tck
+virtual_jtag_tdi <= sld_virtual_jtag:virtual_jtag_0.tdi
+virtual_jtag_tdo => sld_virtual_jtag:virtual_jtag_0.tdo
+virtual_jtag_ir_in[0] <= sld_virtual_jtag:virtual_jtag_0.ir_in[0]
+virtual_jtag_ir_out[0] => sld_virtual_jtag:virtual_jtag_0.ir_out[0]
+virtual_jtag_virtual_state_cdr <= sld_virtual_jtag:virtual_jtag_0.virtual_state_cdr
+virtual_jtag_virtual_state_sdr <= sld_virtual_jtag:virtual_jtag_0.virtual_state_sdr
+virtual_jtag_virtual_state_e1dr <= sld_virtual_jtag:virtual_jtag_0.virtual_state_e1dr
+virtual_jtag_virtual_state_pdr <= sld_virtual_jtag:virtual_jtag_0.virtual_state_pdr
+virtual_jtag_virtual_state_e2dr <= sld_virtual_jtag:virtual_jtag_0.virtual_state_e2dr
+virtual_jtag_virtual_state_udr <= sld_virtual_jtag:virtual_jtag_0.virtual_state_udr
+virtual_jtag_virtual_state_cir <= sld_virtual_jtag:virtual_jtag_0.virtual_state_cir
+virtual_jtag_virtual_state_uir <= sld_virtual_jtag:virtual_jtag_0.virtual_state_uir
+virtual_jtag_tms <= sld_virtual_jtag:virtual_jtag_0.tms
+virtual_jtag_jtag_state_tlr <= sld_virtual_jtag:virtual_jtag_0.jtag_state_tlr
+virtual_jtag_jtag_state_rti <= sld_virtual_jtag:virtual_jtag_0.jtag_state_rti
+virtual_jtag_jtag_state_sdrs <= sld_virtual_jtag:virtual_jtag_0.jtag_state_sdrs
+virtual_jtag_jtag_state_cdr <= sld_virtual_jtag:virtual_jtag_0.jtag_state_cdr
+virtual_jtag_jtag_state_sdr <= sld_virtual_jtag:virtual_jtag_0.jtag_state_sdr
+virtual_jtag_jtag_state_e1dr <= sld_virtual_jtag:virtual_jtag_0.jtag_state_e1dr
+virtual_jtag_jtag_state_pdr <= sld_virtual_jtag:virtual_jtag_0.jtag_state_pdr
+virtual_jtag_jtag_state_e2dr <= sld_virtual_jtag:virtual_jtag_0.jtag_state_e2dr
+virtual_jtag_jtag_state_udr <= sld_virtual_jtag:virtual_jtag_0.jtag_state_udr
+virtual_jtag_jtag_state_sirs <= sld_virtual_jtag:virtual_jtag_0.jtag_state_sirs
+virtual_jtag_jtag_state_cir <= sld_virtual_jtag:virtual_jtag_0.jtag_state_cir
+virtual_jtag_jtag_state_sir <= sld_virtual_jtag:virtual_jtag_0.jtag_state_sir
+virtual_jtag_jtag_state_e1ir <= sld_virtual_jtag:virtual_jtag_0.jtag_state_e1ir
+virtual_jtag_jtag_state_pir <= sld_virtual_jtag:virtual_jtag_0.jtag_state_pir
+virtual_jtag_jtag_state_e2ir <= sld_virtual_jtag:virtual_jtag_0.jtag_state_e2ir
+virtual_jtag_jtag_state_uir <= sld_virtual_jtag:virtual_jtag_0.jtag_state_uir
+
+
+|TopLevel|v_jtag:u0|sld_virtual_jtag:virtual_jtag_0
+tck <= sld_virtual_jtag_basic:sld_virtual_jtag_basic_inst.tck
+tdi <= sld_virtual_jtag_basic:sld_virtual_jtag_basic_inst.tdi
+ir_in[0] <= sld_virtual_jtag_basic:sld_virtual_jtag_basic_inst.ir_in
+tdo => tdo.IN1
+ir_out[0] => ir_out[0].IN1
+virtual_state_cdr <= sld_virtual_jtag_basic:sld_virtual_jtag_basic_inst.virtual_state_cdr
+virtual_state_sdr <= sld_virtual_jtag_basic:sld_virtual_jtag_basic_inst.virtual_state_sdr
+virtual_state_e1dr <= sld_virtual_jtag_basic:sld_virtual_jtag_basic_inst.virtual_state_e1dr
+virtual_state_pdr <= sld_virtual_jtag_basic:sld_virtual_jtag_basic_inst.virtual_state_pdr
+virtual_state_e2dr <= sld_virtual_jtag_basic:sld_virtual_jtag_basic_inst.virtual_state_e2dr
+virtual_state_udr <= sld_virtual_jtag_basic:sld_virtual_jtag_basic_inst.virtual_state_udr
+virtual_state_cir <= sld_virtual_jtag_basic:sld_virtual_jtag_basic_inst.virtual_state_cir
+virtual_state_uir <= sld_virtual_jtag_basic:sld_virtual_jtag_basic_inst.virtual_state_uir
+tms <= sld_virtual_jtag_basic:sld_virtual_jtag_basic_inst.tms
+jtag_state_tlr <= sld_virtual_jtag_basic:sld_virtual_jtag_basic_inst.jtag_state_tlr
+jtag_state_rti <= sld_virtual_jtag_basic:sld_virtual_jtag_basic_inst.jtag_state_rti
+jtag_state_sdrs <= sld_virtual_jtag_basic:sld_virtual_jtag_basic_inst.jtag_state_sdrs
+jtag_state_cdr <= sld_virtual_jtag_basic:sld_virtual_jtag_basic_inst.jtag_state_cdr
+jtag_state_sdr <= sld_virtual_jtag_basic:sld_virtual_jtag_basic_inst.jtag_state_sdr
+jtag_state_e1dr <= sld_virtual_jtag_basic:sld_virtual_jtag_basic_inst.jtag_state_e1dr
+jtag_state_pdr <= sld_virtual_jtag_basic:sld_virtual_jtag_basic_inst.jtag_state_pdr
+jtag_state_e2dr <= sld_virtual_jtag_basic:sld_virtual_jtag_basic_inst.jtag_state_e2dr
+jtag_state_udr <= sld_virtual_jtag_basic:sld_virtual_jtag_basic_inst.jtag_state_udr
+jtag_state_sirs <= sld_virtual_jtag_basic:sld_virtual_jtag_basic_inst.jtag_state_sirs
+jtag_state_cir <= sld_virtual_jtag_basic:sld_virtual_jtag_basic_inst.jtag_state_cir
+jtag_state_sir <= sld_virtual_jtag_basic:sld_virtual_jtag_basic_inst.jtag_state_sir
+jtag_state_e1ir <= sld_virtual_jtag_basic:sld_virtual_jtag_basic_inst.jtag_state_e1ir
+jtag_state_pir <= sld_virtual_jtag_basic:sld_virtual_jtag_basic_inst.jtag_state_pir
+jtag_state_e2ir <= sld_virtual_jtag_basic:sld_virtual_jtag_basic_inst.jtag_state_e2ir
+jtag_state_uir <= sld_virtual_jtag_basic:sld_virtual_jtag_basic_inst.jtag_state_uir
+
+
+|TopLevel|v_jtag:u0|sld_virtual_jtag:virtual_jtag_0|sld_virtual_jtag_basic:sld_virtual_jtag_basic_inst
+tck <= sld_virtual_jtag_impl:sld_virtual_jtag_impl_inst.usr_tck
+tdi <= sld_virtual_jtag_impl:sld_virtual_jtag_impl_inst.usr_tdi
+ir_in[0] <= sld_virtual_jtag_impl:sld_virtual_jtag_impl_inst.usr_ir_in
+tdo => tdo.IN1
+ir_out[0] => ir_out[0].IN1
+virtual_state_cdr <= sld_virtual_jtag_impl:sld_virtual_jtag_impl_inst.usr_virtual_state_cdr
+virtual_state_sdr <= sld_virtual_jtag_impl:sld_virtual_jtag_impl_inst.usr_virtual_state_sdr
+virtual_state_e1dr <= sld_virtual_jtag_impl:sld_virtual_jtag_impl_inst.usr_virtual_state_e1dr
+virtual_state_pdr <= sld_virtual_jtag_impl:sld_virtual_jtag_impl_inst.usr_virtual_state_pdr
+virtual_state_e2dr <= sld_virtual_jtag_impl:sld_virtual_jtag_impl_inst.usr_virtual_state_e2dr
+virtual_state_udr <= sld_virtual_jtag_impl:sld_virtual_jtag_impl_inst.usr_virtual_state_udr
+virtual_state_cir <= sld_virtual_jtag_impl:sld_virtual_jtag_impl_inst.usr_virtual_state_cir
+virtual_state_uir <= sld_virtual_jtag_impl:sld_virtual_jtag_impl_inst.usr_virtual_state_uir
+tms <= sld_virtual_jtag_impl:sld_virtual_jtag_impl_inst.usr_tms
+jtag_state_tlr <= sld_virtual_jtag_impl:sld_virtual_jtag_impl_inst.usr_jtag_state_tlr
+jtag_state_rti <= sld_virtual_jtag_impl:sld_virtual_jtag_impl_inst.usr_jtag_state_rti
+jtag_state_sdrs <= sld_virtual_jtag_impl:sld_virtual_jtag_impl_inst.usr_jtag_state_sdrs
+jtag_state_cdr <= sld_virtual_jtag_impl:sld_virtual_jtag_impl_inst.usr_jtag_state_cdr
+jtag_state_sdr <= sld_virtual_jtag_impl:sld_virtual_jtag_impl_inst.usr_jtag_state_sdr
+jtag_state_e1dr <= sld_virtual_jtag_impl:sld_virtual_jtag_impl_inst.usr_jtag_state_e1dr
+jtag_state_pdr <= sld_virtual_jtag_impl:sld_virtual_jtag_impl_inst.usr_jtag_state_pdr
+jtag_state_e2dr <= sld_virtual_jtag_impl:sld_virtual_jtag_impl_inst.usr_jtag_state_e2dr
+jtag_state_udr <= sld_virtual_jtag_impl:sld_virtual_jtag_impl_inst.usr_jtag_state_udr
+jtag_state_sirs <= sld_virtual_jtag_impl:sld_virtual_jtag_impl_inst.usr_jtag_state_sirs
+jtag_state_cir <= sld_virtual_jtag_impl:sld_virtual_jtag_impl_inst.usr_jtag_state_cir
+jtag_state_sir <= sld_virtual_jtag_impl:sld_virtual_jtag_impl_inst.usr_jtag_state_sir
+jtag_state_e1ir <= sld_virtual_jtag_impl:sld_virtual_jtag_impl_inst.usr_jtag_state_e1ir
+jtag_state_pir <= sld_virtual_jtag_impl:sld_virtual_jtag_impl_inst.usr_jtag_state_pir
+jtag_state_e2ir <= sld_virtual_jtag_impl:sld_virtual_jtag_impl_inst.usr_jtag_state_e2ir
+jtag_state_uir <= sld_virtual_jtag_impl:sld_virtual_jtag_impl_inst.usr_jtag_state_uir
+
+
+|TopLevel|v_jtag:u0|sld_virtual_jtag:virtual_jtag_0|sld_virtual_jtag_basic:sld_virtual_jtag_basic_inst|sld_virtual_jtag_impl:sld_virtual_jtag_impl_inst
+usr_tck <= sld_jtag_endpoint_adapter:jtag_signal_adapter.adapted_tck
+usr_tdi <= sld_jtag_endpoint_adapter:jtag_signal_adapter.adapted_tdi
+usr_ir_in[0] <= sld_jtag_endpoint_adapter:jtag_signal_adapter.adapted_ir_in
+usr_tdo => adapted_tdo.IN1
+usr_ir_out[0] => adapted_ir_out[0].IN1
+usr_virtual_state_cdr <= virtual_state_cdr.DB_MAX_OUTPUT_PORT_TYPE
+usr_virtual_state_sdr <= virtual_state_sdr.DB_MAX_OUTPUT_PORT_TYPE
+usr_virtual_state_e1dr <= virtual_state_e1dr.DB_MAX_OUTPUT_PORT_TYPE
+usr_virtual_state_pdr <= virtual_state_pdr.DB_MAX_OUTPUT_PORT_TYPE
+usr_virtual_state_e2dr <= virtual_state_e2dr.DB_MAX_OUTPUT_PORT_TYPE
+usr_virtual_state_udr <= virtual_state_udr.DB_MAX_OUTPUT_PORT_TYPE
+usr_virtual_state_cir <= sld_jtag_endpoint_adapter:jtag_signal_adapter.adapted_jtag_state_cdr
+usr_virtual_state_uir <= virtual_state_uir.DB_MAX_OUTPUT_PORT_TYPE
+usr_tms <= sld_jtag_endpoint_adapter:jtag_signal_adapter.adapted_tms
+usr_jtag_state_tlr <= sld_jtag_endpoint_adapter:jtag_signal_adapter.adapted_jtag_state_tlr
+usr_jtag_state_rti <= sld_jtag_endpoint_adapter:jtag_signal_adapter.adapted_jtag_state_rti
+usr_jtag_state_sdrs <= sld_jtag_endpoint_adapter:jtag_signal_adapter.adapted_jtag_state_sdrs
+usr_jtag_state_cdr <= sld_jtag_endpoint_adapter:jtag_signal_adapter.adapted_jtag_state_cdr
+usr_jtag_state_sdr <= sld_jtag_endpoint_adapter:jtag_signal_adapter.adapted_jtag_state_sdr
+usr_jtag_state_e1dr <= sld_jtag_endpoint_adapter:jtag_signal_adapter.adapted_jtag_state_e1dr
+usr_jtag_state_pdr <= sld_jtag_endpoint_adapter:jtag_signal_adapter.adapted_jtag_state_pdr
+usr_jtag_state_e2dr <= sld_jtag_endpoint_adapter:jtag_signal_adapter.adapted_jtag_state_e2dr
+usr_jtag_state_udr <= sld_jtag_endpoint_adapter:jtag_signal_adapter.adapted_jtag_state_udr
+usr_jtag_state_sirs <= sld_jtag_endpoint_adapter:jtag_signal_adapter.adapted_jtag_state_sirs
+usr_jtag_state_cir <= sld_jtag_endpoint_adapter:jtag_signal_adapter.adapted_jtag_state_cir
+usr_jtag_state_sir <= sld_jtag_endpoint_adapter:jtag_signal_adapter.adapted_jtag_state_sir
+usr_jtag_state_e1ir <= sld_jtag_endpoint_adapter:jtag_signal_adapter.adapted_jtag_state_e1ir
+usr_jtag_state_pir <= sld_jtag_endpoint_adapter:jtag_signal_adapter.adapted_jtag_state_pir
+usr_jtag_state_e2ir <= sld_jtag_endpoint_adapter:jtag_signal_adapter.adapted_jtag_state_e2ir
+usr_jtag_state_uir <= sld_jtag_endpoint_adapter:jtag_signal_adapter.adapted_jtag_state_uir
+raw_tck => raw_tck.IN1
+raw_tms => raw_tms.IN1
+tdi => tdi.IN1
+jtag_state_tlr => jtag_state_tlr.IN1
+jtag_state_rti => jtag_state_rti.IN1
+jtag_state_sdrs => jtag_state_sdrs.IN1
+jtag_state_cdr => jtag_state_cdr.IN1
+jtag_state_sdr => jtag_state_sdr.IN1
+jtag_state_e1dr => jtag_state_e1dr.IN1
+jtag_state_pdr => jtag_state_pdr.IN1
+jtag_state_e2dr => jtag_state_e2dr.IN1
+jtag_state_udr => jtag_state_udr.IN1
+jtag_state_sirs => jtag_state_sirs.IN1
+jtag_state_cir => jtag_state_cir.IN1
+jtag_state_sir => jtag_state_sir.IN1
+jtag_state_e1ir => jtag_state_e1ir.IN1
+jtag_state_pir => jtag_state_pir.IN1
+jtag_state_e2ir => jtag_state_e2ir.IN1
+jtag_state_uir => jtag_state_uir.IN1
+usr1 => usr1.IN1
+clr => clr.IN1
+ena => ena.IN1
+ir_in[0] => ir_in[0].IN1
+tdo <= sld_jtag_endpoint_adapter:jtag_signal_adapter.tdo
+ir_out[0] <= sld_jtag_endpoint_adapter:jtag_signal_adapter.ir_out
+
+
+|TopLevel|v_jtag:u0|sld_virtual_jtag:virtual_jtag_0|sld_virtual_jtag_basic:sld_virtual_jtag_basic_inst|sld_virtual_jtag_impl:sld_virtual_jtag_impl_inst|sld_jtag_endpoint_adapter:jtag_signal_adapter
+raw_tck => sld_jtag_endpoint_adapter_impl:sld_jtag_endpoint_adapter_impl_inst.raw_tck
+raw_tms => sld_jtag_endpoint_adapter_impl:sld_jtag_endpoint_adapter_impl_inst.raw_tms
+tdi => sld_jtag_endpoint_adapter_impl:sld_jtag_endpoint_adapter_impl_inst.tdi
+vir_tdi => sld_jtag_endpoint_adapter_impl:sld_jtag_endpoint_adapter_impl_inst.vir_tdi
+jtag_state_tlr => sld_jtag_endpoint_adapter_impl:sld_jtag_endpoint_adapter_impl_inst.jtag_state_tlr
+jtag_state_rti => sld_jtag_endpoint_adapter_impl:sld_jtag_endpoint_adapter_impl_inst.jtag_state_rti
+jtag_state_sdrs => sld_jtag_endpoint_adapter_impl:sld_jtag_endpoint_adapter_impl_inst.jtag_state_sdrs
+jtag_state_cdr => sld_jtag_endpoint_adapter_impl:sld_jtag_endpoint_adapter_impl_inst.jtag_state_cdr
+jtag_state_sdr => sld_jtag_endpoint_adapter_impl:sld_jtag_endpoint_adapter_impl_inst.jtag_state_sdr
+jtag_state_e1dr => sld_jtag_endpoint_adapter_impl:sld_jtag_endpoint_adapter_impl_inst.jtag_state_e1dr
+jtag_state_pdr => sld_jtag_endpoint_adapter_impl:sld_jtag_endpoint_adapter_impl_inst.jtag_state_pdr
+jtag_state_e2dr => sld_jtag_endpoint_adapter_impl:sld_jtag_endpoint_adapter_impl_inst.jtag_state_e2dr
+jtag_state_udr => sld_jtag_endpoint_adapter_impl:sld_jtag_endpoint_adapter_impl_inst.jtag_state_udr
+jtag_state_sirs => sld_jtag_endpoint_adapter_impl:sld_jtag_endpoint_adapter_impl_inst.jtag_state_sirs
+jtag_state_cir => sld_jtag_endpoint_adapter_impl:sld_jtag_endpoint_adapter_impl_inst.jtag_state_cir
+jtag_state_sir => sld_jtag_endpoint_adapter_impl:sld_jtag_endpoint_adapter_impl_inst.jtag_state_sir
+jtag_state_e1ir => sld_jtag_endpoint_adapter_impl:sld_jtag_endpoint_adapter_impl_inst.jtag_state_e1ir
+jtag_state_pir => sld_jtag_endpoint_adapter_impl:sld_jtag_endpoint_adapter_impl_inst.jtag_state_pir
+jtag_state_e2ir => sld_jtag_endpoint_adapter_impl:sld_jtag_endpoint_adapter_impl_inst.jtag_state_e2ir
+jtag_state_uir => sld_jtag_endpoint_adapter_impl:sld_jtag_endpoint_adapter_impl_inst.jtag_state_uir
+usr1 => sld_jtag_endpoint_adapter_impl:sld_jtag_endpoint_adapter_impl_inst.usr1
+clr => sld_jtag_endpoint_adapter_impl:sld_jtag_endpoint_adapter_impl_inst.clr
+ena => sld_jtag_endpoint_adapter_impl:sld_jtag_endpoint_adapter_impl_inst.ena
+ir_in[0] => sld_jtag_endpoint_adapter_impl:sld_jtag_endpoint_adapter_impl_inst.ir_in[0]
+tdo <= sld_jtag_endpoint_adapter_impl:sld_jtag_endpoint_adapter_impl_inst.tdo
+ir_out[0] <= sld_jtag_endpoint_adapter_impl:sld_jtag_endpoint_adapter_impl_inst.ir_out[0]
+adapted_tck <= sld_jtag_endpoint_adapter_impl:sld_jtag_endpoint_adapter_impl_inst.adapted_tck
+adapted_tms <= sld_jtag_endpoint_adapter_impl:sld_jtag_endpoint_adapter_impl_inst.adapted_tms
+adapted_tdi <= sld_jtag_endpoint_adapter_impl:sld_jtag_endpoint_adapter_impl_inst.adapted_tdi
+adapted_vir_tdi <= sld_jtag_endpoint_adapter_impl:sld_jtag_endpoint_adapter_impl_inst.adapted_vir_tdi
+adapted_jtag_state_tlr <= sld_jtag_endpoint_adapter_impl:sld_jtag_endpoint_adapter_impl_inst.adapted_jtag_state_tlr
+adapted_jtag_state_rti <= sld_jtag_endpoint_adapter_impl:sld_jtag_endpoint_adapter_impl_inst.adapted_jtag_state_rti
+adapted_jtag_state_sdrs <= sld_jtag_endpoint_adapter_impl:sld_jtag_endpoint_adapter_impl_inst.adapted_jtag_state_sdrs
+adapted_jtag_state_cdr <= sld_jtag_endpoint_adapter_impl:sld_jtag_endpoint_adapter_impl_inst.adapted_jtag_state_cdr
+adapted_jtag_state_sdr <= sld_jtag_endpoint_adapter_impl:sld_jtag_endpoint_adapter_impl_inst.adapted_jtag_state_sdr
+adapted_jtag_state_e1dr <= sld_jtag_endpoint_adapter_impl:sld_jtag_endpoint_adapter_impl_inst.adapted_jtag_state_e1dr
+adapted_jtag_state_pdr <= sld_jtag_endpoint_adapter_impl:sld_jtag_endpoint_adapter_impl_inst.adapted_jtag_state_pdr
+adapted_jtag_state_e2dr <= sld_jtag_endpoint_adapter_impl:sld_jtag_endpoint_adapter_impl_inst.adapted_jtag_state_e2dr
+adapted_jtag_state_udr <= sld_jtag_endpoint_adapter_impl:sld_jtag_endpoint_adapter_impl_inst.adapted_jtag_state_udr
+adapted_jtag_state_sirs <= sld_jtag_endpoint_adapter_impl:sld_jtag_endpoint_adapter_impl_inst.adapted_jtag_state_sirs
+adapted_jtag_state_cir <= sld_jtag_endpoint_adapter_impl:sld_jtag_endpoint_adapter_impl_inst.adapted_jtag_state_cir
+adapted_jtag_state_sir <= sld_jtag_endpoint_adapter_impl:sld_jtag_endpoint_adapter_impl_inst.adapted_jtag_state_sir
+adapted_jtag_state_e1ir <= sld_jtag_endpoint_adapter_impl:sld_jtag_endpoint_adapter_impl_inst.adapted_jtag_state_e1ir
+adapted_jtag_state_pir <= sld_jtag_endpoint_adapter_impl:sld_jtag_endpoint_adapter_impl_inst.adapted_jtag_state_pir
+adapted_jtag_state_e2ir <= sld_jtag_endpoint_adapter_impl:sld_jtag_endpoint_adapter_impl_inst.adapted_jtag_state_e2ir
+adapted_jtag_state_uir <= sld_jtag_endpoint_adapter_impl:sld_jtag_endpoint_adapter_impl_inst.adapted_jtag_state_uir
+adapted_usr1 <= sld_jtag_endpoint_adapter_impl:sld_jtag_endpoint_adapter_impl_inst.adapted_usr1
+adapted_clr <= sld_jtag_endpoint_adapter_impl:sld_jtag_endpoint_adapter_impl_inst.adapted_clr
+adapted_ena <= sld_jtag_endpoint_adapter_impl:sld_jtag_endpoint_adapter_impl_inst.adapted_ena
+adapted_ir_in[0] <= sld_jtag_endpoint_adapter_impl:sld_jtag_endpoint_adapter_impl_inst.adapted_ir_in[0]
+adapted_tdo => sld_jtag_endpoint_adapter_impl:sld_jtag_endpoint_adapter_impl_inst.adapted_tdo
+adapted_ir_out[0] => sld_jtag_endpoint_adapter_impl:sld_jtag_endpoint_adapter_impl_inst.adapted_ir_out[0]
+
+
+|TopLevel|v_jtag:u0|sld_virtual_jtag:virtual_jtag_0|sld_virtual_jtag_basic:sld_virtual_jtag_basic_inst|sld_virtual_jtag_impl:sld_virtual_jtag_impl_inst|sld_jtag_endpoint_adapter:jtag_signal_adapter|sld_jtag_endpoint_adapter_impl:sld_jtag_endpoint_adapter_impl_inst
+raw_tck => adapted_tck.DATAIN
+raw_tms => adapted_tms.DATAIN
+tdi => adapted_tdi.DATAIN
+vir_tdi => adapted_vir_tdi.DATAIN
+jtag_state_tlr => adapted_jtag_state_tlr.DATAIN
+jtag_state_rti => adapted_jtag_state_rti.DATAIN
+jtag_state_sdrs => adapted_jtag_state_sdrs.DATAIN
+jtag_state_cdr => adapted_jtag_state_cdr.DATAIN
+jtag_state_sdr => adapted_jtag_state_sdr.DATAIN
+jtag_state_e1dr => adapted_jtag_state_e1dr.DATAIN
+jtag_state_pdr => adapted_jtag_state_pdr.DATAIN
+jtag_state_e2dr => adapted_jtag_state_e2dr.DATAIN
+jtag_state_udr => adapted_jtag_state_udr.DATAIN
+jtag_state_sirs => adapted_jtag_state_sirs.DATAIN
+jtag_state_cir => adapted_jtag_state_cir.DATAIN
+jtag_state_sir => adapted_jtag_state_sir.DATAIN
+jtag_state_e1ir => adapted_jtag_state_e1ir.DATAIN
+jtag_state_pir => adapted_jtag_state_pir.DATAIN
+jtag_state_e2ir => adapted_jtag_state_e2ir.DATAIN
+jtag_state_uir => adapted_jtag_state_uir.DATAIN
+usr1 => adapted_usr1.DATAIN
+clr => adapted_clr.DATAIN
+ena => adapted_ena.DATAIN
+ir_in[0] => adapted_ir_in[0].DATAIN
+tdo <= adapted_tdo.DB_MAX_OUTPUT_PORT_TYPE
+ir_out[0] <= adapted_ir_out[0].DB_MAX_OUTPUT_PORT_TYPE
+adapted_tck <= raw_tck.DB_MAX_OUTPUT_PORT_TYPE
+adapted_tms <= raw_tms.DB_MAX_OUTPUT_PORT_TYPE
+adapted_tdi <= tdi.DB_MAX_OUTPUT_PORT_TYPE
+adapted_vir_tdi <= vir_tdi.DB_MAX_OUTPUT_PORT_TYPE
+adapted_jtag_state_tlr <= jtag_state_tlr.DB_MAX_OUTPUT_PORT_TYPE
+adapted_jtag_state_rti <= jtag_state_rti.DB_MAX_OUTPUT_PORT_TYPE
+adapted_jtag_state_sdrs <= jtag_state_sdrs.DB_MAX_OUTPUT_PORT_TYPE
+adapted_jtag_state_cdr <= jtag_state_cdr.DB_MAX_OUTPUT_PORT_TYPE
+adapted_jtag_state_sdr <= jtag_state_sdr.DB_MAX_OUTPUT_PORT_TYPE
+adapted_jtag_state_e1dr <= jtag_state_e1dr.DB_MAX_OUTPUT_PORT_TYPE
+adapted_jtag_state_pdr <= jtag_state_pdr.DB_MAX_OUTPUT_PORT_TYPE
+adapted_jtag_state_e2dr <= jtag_state_e2dr.DB_MAX_OUTPUT_PORT_TYPE
+adapted_jtag_state_udr <= jtag_state_udr.DB_MAX_OUTPUT_PORT_TYPE
+adapted_jtag_state_sirs <= jtag_state_sirs.DB_MAX_OUTPUT_PORT_TYPE
+adapted_jtag_state_cir <= jtag_state_cir.DB_MAX_OUTPUT_PORT_TYPE
+adapted_jtag_state_sir <= jtag_state_sir.DB_MAX_OUTPUT_PORT_TYPE
+adapted_jtag_state_e1ir <= jtag_state_e1ir.DB_MAX_OUTPUT_PORT_TYPE
+adapted_jtag_state_pir <= jtag_state_pir.DB_MAX_OUTPUT_PORT_TYPE
+adapted_jtag_state_e2ir <= jtag_state_e2ir.DB_MAX_OUTPUT_PORT_TYPE
+adapted_jtag_state_uir <= jtag_state_uir.DB_MAX_OUTPUT_PORT_TYPE
+adapted_usr1 <= usr1.DB_MAX_OUTPUT_PORT_TYPE
+adapted_clr <= clr.DB_MAX_OUTPUT_PORT_TYPE
+adapted_ena <= ena.DB_MAX_OUTPUT_PORT_TYPE
+adapted_ir_in[0] <= ir_in[0].DB_MAX_OUTPUT_PORT_TYPE
+adapted_tdo => tdo.DATAIN
+adapted_ir_out[0] => ir_out[0].DATAIN
+
+
+|TopLevel|DUT:dut_instance
+input_vector[0] => Quiz:dut_instance.A[0]
+input_vector[1] => Quiz:dut_instance.A[1]
+input_vector[2] => Quiz:dut_instance.A[2]
+input_vector[3] => Quiz:dut_instance.A[3]
+input_vector[4] => Quiz:dut_instance.A[4]
+input_vector[5] => Quiz:dut_instance.A[5]
+input_vector[6] => Quiz:dut_instance.A[6]
+input_vector[7] => Quiz:dut_instance.A[7]
+input_vector[8] => Quiz:dut_instance.M
+output_vector[0] <= Quiz:dut_instance.Y[0]
+output_vector[1] <= Quiz:dut_instance.Y[1]
+output_vector[2] <= Quiz:dut_instance.Y[2]
+output_vector[3] <= Quiz:dut_instance.Y[3]
+output_vector[4] <= Quiz:dut_instance.Y[4]
+output_vector[5] <= Quiz:dut_instance.Y[5]
+output_vector[6] <= Quiz:dut_instance.Y[6]
+output_vector[7] <= Quiz:dut_instance.Y[7]
+
+
+|TopLevel|DUT:dut_instance|Quiz:dut_instance
+A[0] => SHIFTR:shift.a[0]
+A[0] => FA:ADD:0:FA1.in2
+A[1] => SHIFTR:shift.a[1]
+A[1] => FA:ADD:1:FA1.in2
+A[2] => SHIFTR:shift.a[2]
+A[2] => FA:ADD:2:FA1.in2
+A[3] => SHIFTR:shift.a[3]
+A[3] => FA:ADD:3:FA1.in2
+A[4] => SHIFTR:shift.a[4]
+A[4] => FA:ADD:4:FA1.in2
+A[5] => SHIFTR:shift.a[5]
+A[5] => FA:ADD:5:FA1.in2
+A[6] => SHIFTR:shift.a[6]
+A[6] => FA:ADD:6:FA1.in2
+A[7] => SHIFTR:shift.a[7]
+A[7] => FA:FA2.in2
+M => INVERTER:inv.A
+M => SHIFTR:shift.b[0]
+Y[0] <= FA:ADD:0:FA1.sum1
+Y[1] <= FA:ADD:1:FA1.sum1
+Y[2] <= FA:ADD:2:FA1.sum1
+Y[3] <= FA:ADD:3:FA1.sum1
+Y[4] <= FA:ADD:4:FA1.sum1
+Y[5] <= FA:ADD:5:FA1.sum1
+Y[6] <= FA:ADD:6:FA1.sum1
+Y[7] <= FA:FA2.sum1
+
+
+|TopLevel|DUT:dut_instance|Quiz:dut_instance|INVERTER:inv
+A => Y.DATAIN
+Y <= A.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|TopLevel|DUT:dut_instance|Quiz:dut_instance|SHIFTR:shift
+a[0] => bit_reversal:BR1.inp[0]
+a[1] => bit_reversal:BR1.inp[1]
+a[2] => bit_reversal:BR1.inp[2]
+a[3] => bit_reversal:BR1.inp[3]
+a[4] => bit_reversal:BR1.inp[4]
+a[5] => bit_reversal:BR1.inp[5]
+a[6] => bit_reversal:BR1.inp[6]
+a[7] => bit_reversal:BR1.inp[7]
+b[0] => MUX2_1:BIT_1:0:BIT_11:mux11.sl
+b[0] => MUX2_1:BIT_1:1:BIT_11:mux11.sl
+b[0] => MUX2_1:BIT_1:2:BIT_11:mux11.sl
+b[0] => MUX2_1:BIT_1:3:BIT_11:mux11.sl
+b[0] => MUX2_1:BIT_1:4:BIT_11:mux11.sl
+b[0] => MUX2_1:BIT_1:5:BIT_11:mux11.sl
+b[0] => MUX2_1:BIT_1:6:BIT_11:mux11.sl
+b[0] => MUX2_1:BIT_1:7:BIT_12:mux12.sl
+b[1] => MUX2_1:BIT_2:0:BIT_21:mux21.sl
+b[1] => MUX2_1:BIT_2:1:BIT_21:mux21.sl
+b[1] => MUX2_1:BIT_2:2:BIT_21:mux21.sl
+b[1] => MUX2_1:BIT_2:3:BIT_21:mux21.sl
+b[1] => MUX2_1:BIT_2:4:BIT_21:mux21.sl
+b[1] => MUX2_1:BIT_2:5:BIT_21:mux21.sl
+b[1] => MUX2_1:BIT_2:6:BIT_22:mux22.sl
+b[1] => MUX2_1:BIT_2:7:BIT_22:mux22.sl
+b[2] => MUX2_1:BIT_4:0:BIT_41:mux41.sl
+b[2] => MUX2_1:BIT_4:1:BIT_41:mux41.sl
+b[2] => MUX2_1:BIT_4:2:BIT_41:mux41.sl
+b[2] => MUX2_1:BIT_4:3:BIT_41:mux41.sl
+b[2] => MUX2_1:BIT_4:4:BIT_42:mux42.sl
+b[2] => MUX2_1:BIT_4:5:BIT_42:mux42.sl
+b[2] => MUX2_1:BIT_4:6:BIT_42:mux42.sl
+b[2] => MUX2_1:BIT_4:7:BIT_42:mux42.sl
+l => bit_reversal:BR1.enable
+l => bit_reversal:BR2.enable
+s[0] <= bit_reversal:BR2.oup[0]
+s[1] <= bit_reversal:BR2.oup[1]
+s[2] <= bit_reversal:BR2.oup[2]
+s[3] <= bit_reversal:BR2.oup[3]
+s[4] <= bit_reversal:BR2.oup[4]
+s[5] <= bit_reversal:BR2.oup[5]
+s[6] <= bit_reversal:BR2.oup[6]
+s[7] <= bit_reversal:BR2.oup[7]
+
+
+|TopLevel|DUT:dut_instance|Quiz:dut_instance|SHIFTR:shift|bit_reversal:BR1
+inp[0] => oup.DATAB
+inp[0] => oup.DATAA
+inp[1] => oup.DATAB
+inp[1] => oup.DATAA
+inp[2] => oup.DATAB
+inp[2] => oup.DATAA
+inp[3] => oup.DATAB
+inp[3] => oup.DATAA
+inp[4] => oup.DATAA
+inp[4] => oup.DATAB
+inp[5] => oup.DATAA
+inp[5] => oup.DATAB
+inp[6] => oup.DATAA
+inp[6] => oup.DATAB
+inp[7] => oup.DATAA
+inp[7] => oup.DATAB
+enable => oup.OUTPUTSELECT
+enable => oup.OUTPUTSELECT
+enable => oup.OUTPUTSELECT
+enable => oup.OUTPUTSELECT
+enable => oup.OUTPUTSELECT
+enable => oup.OUTPUTSELECT
+enable => oup.OUTPUTSELECT
+enable => oup.OUTPUTSELECT
+oup[0] <= oup.DB_MAX_OUTPUT_PORT_TYPE
+oup[1] <= oup.DB_MAX_OUTPUT_PORT_TYPE
+oup[2] <= oup.DB_MAX_OUTPUT_PORT_TYPE
+oup[3] <= oup.DB_MAX_OUTPUT_PORT_TYPE
+oup[4] <= oup.DB_MAX_OUTPUT_PORT_TYPE
+oup[5] <= oup.DB_MAX_OUTPUT_PORT_TYPE
+oup[6] <= oup.DB_MAX_OUTPUT_PORT_TYPE
+oup[7] <= oup.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|TopLevel|DUT:dut_instance|Quiz:dut_instance|SHIFTR:shift|MUX2_1:\BIT_4:0:BIT_41:mux41
+in0 => out1.DATAB
+in1 => out1.DATAA
+sl => out1.OUTPUTSELECT
+out1 <= out1.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|TopLevel|DUT:dut_instance|Quiz:dut_instance|SHIFTR:shift|MUX2_1:\BIT_4:1:BIT_41:mux41
+in0 => out1.DATAB
+in1 => out1.DATAA
+sl => out1.OUTPUTSELECT
+out1 <= out1.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|TopLevel|DUT:dut_instance|Quiz:dut_instance|SHIFTR:shift|MUX2_1:\BIT_4:2:BIT_41:mux41
+in0 => out1.DATAB
+in1 => out1.DATAA
+sl => out1.OUTPUTSELECT
+out1 <= out1.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|TopLevel|DUT:dut_instance|Quiz:dut_instance|SHIFTR:shift|MUX2_1:\BIT_4:3:BIT_41:mux41
+in0 => out1.DATAB
+in1 => out1.DATAA
+sl => out1.OUTPUTSELECT
+out1 <= out1.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|TopLevel|DUT:dut_instance|Quiz:dut_instance|SHIFTR:shift|MUX2_1:\BIT_4:4:BIT_42:mux42
+in0 => out1.DATAB
+in1 => out1.DATAA
+sl => out1.OUTPUTSELECT
+out1 <= out1.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|TopLevel|DUT:dut_instance|Quiz:dut_instance|SHIFTR:shift|MUX2_1:\BIT_4:5:BIT_42:mux42
+in0 => out1.DATAB
+in1 => out1.DATAA
+sl => out1.OUTPUTSELECT
+out1 <= out1.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|TopLevel|DUT:dut_instance|Quiz:dut_instance|SHIFTR:shift|MUX2_1:\BIT_4:6:BIT_42:mux42
+in0 => out1.DATAB
+in1 => out1.DATAA
+sl => out1.OUTPUTSELECT
+out1 <= out1.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|TopLevel|DUT:dut_instance|Quiz:dut_instance|SHIFTR:shift|MUX2_1:\BIT_4:7:BIT_42:mux42
+in0 => out1.DATAB
+in1 => out1.DATAA
+sl => out1.OUTPUTSELECT
+out1 <= out1.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|TopLevel|DUT:dut_instance|Quiz:dut_instance|SHIFTR:shift|MUX2_1:\BIT_2:0:BIT_21:mux21
+in0 => out1.DATAB
+in1 => out1.DATAA
+sl => out1.OUTPUTSELECT
+out1 <= out1.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|TopLevel|DUT:dut_instance|Quiz:dut_instance|SHIFTR:shift|MUX2_1:\BIT_2:1:BIT_21:mux21
+in0 => out1.DATAB
+in1 => out1.DATAA
+sl => out1.OUTPUTSELECT
+out1 <= out1.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|TopLevel|DUT:dut_instance|Quiz:dut_instance|SHIFTR:shift|MUX2_1:\BIT_2:2:BIT_21:mux21
+in0 => out1.DATAB
+in1 => out1.DATAA
+sl => out1.OUTPUTSELECT
+out1 <= out1.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|TopLevel|DUT:dut_instance|Quiz:dut_instance|SHIFTR:shift|MUX2_1:\BIT_2:3:BIT_21:mux21
+in0 => out1.DATAB
+in1 => out1.DATAA
+sl => out1.OUTPUTSELECT
+out1 <= out1.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|TopLevel|DUT:dut_instance|Quiz:dut_instance|SHIFTR:shift|MUX2_1:\BIT_2:4:BIT_21:mux21
+in0 => out1.DATAB
+in1 => out1.DATAA
+sl => out1.OUTPUTSELECT
+out1 <= out1.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|TopLevel|DUT:dut_instance|Quiz:dut_instance|SHIFTR:shift|MUX2_1:\BIT_2:5:BIT_21:mux21
+in0 => out1.DATAB
+in1 => out1.DATAA
+sl => out1.OUTPUTSELECT
+out1 <= out1.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|TopLevel|DUT:dut_instance|Quiz:dut_instance|SHIFTR:shift|MUX2_1:\BIT_2:6:BIT_22:mux22
+in0 => out1.DATAB
+in1 => out1.DATAA
+sl => out1.OUTPUTSELECT
+out1 <= out1.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|TopLevel|DUT:dut_instance|Quiz:dut_instance|SHIFTR:shift|MUX2_1:\BIT_2:7:BIT_22:mux22
+in0 => out1.DATAB
+in1 => out1.DATAA
+sl => out1.OUTPUTSELECT
+out1 <= out1.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|TopLevel|DUT:dut_instance|Quiz:dut_instance|SHIFTR:shift|MUX2_1:\BIT_1:0:BIT_11:mux11
+in0 => out1.DATAB
+in1 => out1.DATAA
+sl => out1.OUTPUTSELECT
+out1 <= out1.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|TopLevel|DUT:dut_instance|Quiz:dut_instance|SHIFTR:shift|MUX2_1:\BIT_1:1:BIT_11:mux11
+in0 => out1.DATAB
+in1 => out1.DATAA
+sl => out1.OUTPUTSELECT
+out1 <= out1.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|TopLevel|DUT:dut_instance|Quiz:dut_instance|SHIFTR:shift|MUX2_1:\BIT_1:2:BIT_11:mux11
+in0 => out1.DATAB
+in1 => out1.DATAA
+sl => out1.OUTPUTSELECT
+out1 <= out1.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|TopLevel|DUT:dut_instance|Quiz:dut_instance|SHIFTR:shift|MUX2_1:\BIT_1:3:BIT_11:mux11
+in0 => out1.DATAB
+in1 => out1.DATAA
+sl => out1.OUTPUTSELECT
+out1 <= out1.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|TopLevel|DUT:dut_instance|Quiz:dut_instance|SHIFTR:shift|MUX2_1:\BIT_1:4:BIT_11:mux11
+in0 => out1.DATAB
+in1 => out1.DATAA
+sl => out1.OUTPUTSELECT
+out1 <= out1.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|TopLevel|DUT:dut_instance|Quiz:dut_instance|SHIFTR:shift|MUX2_1:\BIT_1:5:BIT_11:mux11
+in0 => out1.DATAB
+in1 => out1.DATAA
+sl => out1.OUTPUTSELECT
+out1 <= out1.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|TopLevel|DUT:dut_instance|Quiz:dut_instance|SHIFTR:shift|MUX2_1:\BIT_1:6:BIT_11:mux11
+in0 => out1.DATAB
+in1 => out1.DATAA
+sl => out1.OUTPUTSELECT
+out1 <= out1.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|TopLevel|DUT:dut_instance|Quiz:dut_instance|SHIFTR:shift|MUX2_1:\BIT_1:7:BIT_12:mux12
+in0 => out1.DATAB
+in1 => out1.DATAA
+sl => out1.OUTPUTSELECT
+out1 <= out1.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|TopLevel|DUT:dut_instance|Quiz:dut_instance|SHIFTR:shift|bit_reversal:BR2
+inp[0] => oup.DATAB
+inp[0] => oup.DATAA
+inp[1] => oup.DATAB
+inp[1] => oup.DATAA
+inp[2] => oup.DATAB
+inp[2] => oup.DATAA
+inp[3] => oup.DATAB
+inp[3] => oup.DATAA
+inp[4] => oup.DATAA
+inp[4] => oup.DATAB
+inp[5] => oup.DATAA
+inp[5] => oup.DATAB
+inp[6] => oup.DATAA
+inp[6] => oup.DATAB
+inp[7] => oup.DATAA
+inp[7] => oup.DATAB
+enable => oup.OUTPUTSELECT
+enable => oup.OUTPUTSELECT
+enable => oup.OUTPUTSELECT
+enable => oup.OUTPUTSELECT
+enable => oup.OUTPUTSELECT
+enable => oup.OUTPUTSELECT
+enable => oup.OUTPUTSELECT
+enable => oup.OUTPUTSELECT
+oup[0] <= oup.DB_MAX_OUTPUT_PORT_TYPE
+oup[1] <= oup.DB_MAX_OUTPUT_PORT_TYPE
+oup[2] <= oup.DB_MAX_OUTPUT_PORT_TYPE
+oup[3] <= oup.DB_MAX_OUTPUT_PORT_TYPE
+oup[4] <= oup.DB_MAX_OUTPUT_PORT_TYPE
+oup[5] <= oup.DB_MAX_OUTPUT_PORT_TYPE
+oup[6] <= oup.DB_MAX_OUTPUT_PORT_TYPE
+oup[7] <= oup.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|TopLevel|DUT:dut_instance|Quiz:dut_instance|FA:\ADD:0:FA1
+in1 => HA:HA_1.in1
+in2 => HA:HA_1.in2
+in3 => HA:HA_2.in2
+sum1 <= HA:HA_2.sum1
+car1 <= OR_PS:OR1.out1
+
+
+|TopLevel|DUT:dut_instance|Quiz:dut_instance|FA:\ADD:0:FA1|HA:HA_1
+in1 => XOR_PS:XOR1.in1
+in1 => AND_PS:AND1.in1
+in2 => XOR_PS:XOR1.in2
+in2 => AND_PS:AND1.in2
+sum1 <= XOR_PS:XOR1.out1
+car1 <= AND_PS:AND1.out1
+
+
+|TopLevel|DUT:dut_instance|Quiz:dut_instance|FA:\ADD:0:FA1|HA:HA_1|XOR_PS:XOR1
+in1 => NAND_2:NAND_02.A
+in1 => NAND_2:NAND_02.B
+in1 => NAND_2:NAND_03.A
+in2 => NAND_2:NAND_01.A
+in2 => NAND_2:NAND_01.B
+in2 => NAND_2:NAND_04.B
+out1 <= NAND_2:NAND_05.Y
+
+
+|TopLevel|DUT:dut_instance|Quiz:dut_instance|FA:\ADD:0:FA1|HA:HA_1|XOR_PS:XOR1|NAND_2:NAND_01
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|TopLevel|DUT:dut_instance|Quiz:dut_instance|FA:\ADD:0:FA1|HA:HA_1|XOR_PS:XOR1|NAND_2:NAND_02
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|TopLevel|DUT:dut_instance|Quiz:dut_instance|FA:\ADD:0:FA1|HA:HA_1|XOR_PS:XOR1|NAND_2:NAND_03
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|TopLevel|DUT:dut_instance|Quiz:dut_instance|FA:\ADD:0:FA1|HA:HA_1|XOR_PS:XOR1|NAND_2:NAND_04
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|TopLevel|DUT:dut_instance|Quiz:dut_instance|FA:\ADD:0:FA1|HA:HA_1|XOR_PS:XOR1|NAND_2:NAND_05
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|TopLevel|DUT:dut_instance|Quiz:dut_instance|FA:\ADD:0:FA1|HA:HA_1|AND_PS:AND1
+in1 => NAND_2:NAND_01.A
+in2 => NAND_2:NAND_01.B
+out1 <= NAND_2:NAND_02.Y
+
+
+|TopLevel|DUT:dut_instance|Quiz:dut_instance|FA:\ADD:0:FA1|HA:HA_1|AND_PS:AND1|NAND_2:NAND_01
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|TopLevel|DUT:dut_instance|Quiz:dut_instance|FA:\ADD:0:FA1|HA:HA_1|AND_PS:AND1|NAND_2:NAND_02
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|TopLevel|DUT:dut_instance|Quiz:dut_instance|FA:\ADD:0:FA1|HA:HA_2
+in1 => XOR_PS:XOR1.in1
+in1 => AND_PS:AND1.in1
+in2 => XOR_PS:XOR1.in2
+in2 => AND_PS:AND1.in2
+sum1 <= XOR_PS:XOR1.out1
+car1 <= AND_PS:AND1.out1
+
+
+|TopLevel|DUT:dut_instance|Quiz:dut_instance|FA:\ADD:0:FA1|HA:HA_2|XOR_PS:XOR1
+in1 => NAND_2:NAND_02.A
+in1 => NAND_2:NAND_02.B
+in1 => NAND_2:NAND_03.A
+in2 => NAND_2:NAND_01.A
+in2 => NAND_2:NAND_01.B
+in2 => NAND_2:NAND_04.B
+out1 <= NAND_2:NAND_05.Y
+
+
+|TopLevel|DUT:dut_instance|Quiz:dut_instance|FA:\ADD:0:FA1|HA:HA_2|XOR_PS:XOR1|NAND_2:NAND_01
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|TopLevel|DUT:dut_instance|Quiz:dut_instance|FA:\ADD:0:FA1|HA:HA_2|XOR_PS:XOR1|NAND_2:NAND_02
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|TopLevel|DUT:dut_instance|Quiz:dut_instance|FA:\ADD:0:FA1|HA:HA_2|XOR_PS:XOR1|NAND_2:NAND_03
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|TopLevel|DUT:dut_instance|Quiz:dut_instance|FA:\ADD:0:FA1|HA:HA_2|XOR_PS:XOR1|NAND_2:NAND_04
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|TopLevel|DUT:dut_instance|Quiz:dut_instance|FA:\ADD:0:FA1|HA:HA_2|XOR_PS:XOR1|NAND_2:NAND_05
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|TopLevel|DUT:dut_instance|Quiz:dut_instance|FA:\ADD:0:FA1|HA:HA_2|AND_PS:AND1
+in1 => NAND_2:NAND_01.A
+in2 => NAND_2:NAND_01.B
+out1 <= NAND_2:NAND_02.Y
+
+
+|TopLevel|DUT:dut_instance|Quiz:dut_instance|FA:\ADD:0:FA1|HA:HA_2|AND_PS:AND1|NAND_2:NAND_01
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|TopLevel|DUT:dut_instance|Quiz:dut_instance|FA:\ADD:0:FA1|HA:HA_2|AND_PS:AND1|NAND_2:NAND_02
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|TopLevel|DUT:dut_instance|Quiz:dut_instance|FA:\ADD:0:FA1|OR_PS:OR1
+in1 => NAND_2:NAND_01.A
+in1 => NAND_2:NAND_01.B
+in2 => NAND_2:NAND_02.A
+in2 => NAND_2:NAND_02.B
+out1 <= NAND_2:NAND_03.Y
+
+
+|TopLevel|DUT:dut_instance|Quiz:dut_instance|FA:\ADD:0:FA1|OR_PS:OR1|NAND_2:NAND_01
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|TopLevel|DUT:dut_instance|Quiz:dut_instance|FA:\ADD:0:FA1|OR_PS:OR1|NAND_2:NAND_02
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|TopLevel|DUT:dut_instance|Quiz:dut_instance|FA:\ADD:0:FA1|OR_PS:OR1|NAND_2:NAND_03
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|TopLevel|DUT:dut_instance|Quiz:dut_instance|FA:\ADD:1:FA1
+in1 => HA:HA_1.in1
+in2 => HA:HA_1.in2
+in3 => HA:HA_2.in2
+sum1 <= HA:HA_2.sum1
+car1 <= OR_PS:OR1.out1
+
+
+|TopLevel|DUT:dut_instance|Quiz:dut_instance|FA:\ADD:1:FA1|HA:HA_1
+in1 => XOR_PS:XOR1.in1
+in1 => AND_PS:AND1.in1
+in2 => XOR_PS:XOR1.in2
+in2 => AND_PS:AND1.in2
+sum1 <= XOR_PS:XOR1.out1
+car1 <= AND_PS:AND1.out1
+
+
+|TopLevel|DUT:dut_instance|Quiz:dut_instance|FA:\ADD:1:FA1|HA:HA_1|XOR_PS:XOR1
+in1 => NAND_2:NAND_02.A
+in1 => NAND_2:NAND_02.B
+in1 => NAND_2:NAND_03.A
+in2 => NAND_2:NAND_01.A
+in2 => NAND_2:NAND_01.B
+in2 => NAND_2:NAND_04.B
+out1 <= NAND_2:NAND_05.Y
+
+
+|TopLevel|DUT:dut_instance|Quiz:dut_instance|FA:\ADD:1:FA1|HA:HA_1|XOR_PS:XOR1|NAND_2:NAND_01
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|TopLevel|DUT:dut_instance|Quiz:dut_instance|FA:\ADD:1:FA1|HA:HA_1|XOR_PS:XOR1|NAND_2:NAND_02
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|TopLevel|DUT:dut_instance|Quiz:dut_instance|FA:\ADD:1:FA1|HA:HA_1|XOR_PS:XOR1|NAND_2:NAND_03
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|TopLevel|DUT:dut_instance|Quiz:dut_instance|FA:\ADD:1:FA1|HA:HA_1|XOR_PS:XOR1|NAND_2:NAND_04
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|TopLevel|DUT:dut_instance|Quiz:dut_instance|FA:\ADD:1:FA1|HA:HA_1|XOR_PS:XOR1|NAND_2:NAND_05
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|TopLevel|DUT:dut_instance|Quiz:dut_instance|FA:\ADD:1:FA1|HA:HA_1|AND_PS:AND1
+in1 => NAND_2:NAND_01.A
+in2 => NAND_2:NAND_01.B
+out1 <= NAND_2:NAND_02.Y
+
+
+|TopLevel|DUT:dut_instance|Quiz:dut_instance|FA:\ADD:1:FA1|HA:HA_1|AND_PS:AND1|NAND_2:NAND_01
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|TopLevel|DUT:dut_instance|Quiz:dut_instance|FA:\ADD:1:FA1|HA:HA_1|AND_PS:AND1|NAND_2:NAND_02
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|TopLevel|DUT:dut_instance|Quiz:dut_instance|FA:\ADD:1:FA1|HA:HA_2
+in1 => XOR_PS:XOR1.in1
+in1 => AND_PS:AND1.in1
+in2 => XOR_PS:XOR1.in2
+in2 => AND_PS:AND1.in2
+sum1 <= XOR_PS:XOR1.out1
+car1 <= AND_PS:AND1.out1
+
+
+|TopLevel|DUT:dut_instance|Quiz:dut_instance|FA:\ADD:1:FA1|HA:HA_2|XOR_PS:XOR1
+in1 => NAND_2:NAND_02.A
+in1 => NAND_2:NAND_02.B
+in1 => NAND_2:NAND_03.A
+in2 => NAND_2:NAND_01.A
+in2 => NAND_2:NAND_01.B
+in2 => NAND_2:NAND_04.B
+out1 <= NAND_2:NAND_05.Y
+
+
+|TopLevel|DUT:dut_instance|Quiz:dut_instance|FA:\ADD:1:FA1|HA:HA_2|XOR_PS:XOR1|NAND_2:NAND_01
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|TopLevel|DUT:dut_instance|Quiz:dut_instance|FA:\ADD:1:FA1|HA:HA_2|XOR_PS:XOR1|NAND_2:NAND_02
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|TopLevel|DUT:dut_instance|Quiz:dut_instance|FA:\ADD:1:FA1|HA:HA_2|XOR_PS:XOR1|NAND_2:NAND_03
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|TopLevel|DUT:dut_instance|Quiz:dut_instance|FA:\ADD:1:FA1|HA:HA_2|XOR_PS:XOR1|NAND_2:NAND_04
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|TopLevel|DUT:dut_instance|Quiz:dut_instance|FA:\ADD:1:FA1|HA:HA_2|XOR_PS:XOR1|NAND_2:NAND_05
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|TopLevel|DUT:dut_instance|Quiz:dut_instance|FA:\ADD:1:FA1|HA:HA_2|AND_PS:AND1
+in1 => NAND_2:NAND_01.A
+in2 => NAND_2:NAND_01.B
+out1 <= NAND_2:NAND_02.Y
+
+
+|TopLevel|DUT:dut_instance|Quiz:dut_instance|FA:\ADD:1:FA1|HA:HA_2|AND_PS:AND1|NAND_2:NAND_01
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|TopLevel|DUT:dut_instance|Quiz:dut_instance|FA:\ADD:1:FA1|HA:HA_2|AND_PS:AND1|NAND_2:NAND_02
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|TopLevel|DUT:dut_instance|Quiz:dut_instance|FA:\ADD:1:FA1|OR_PS:OR1
+in1 => NAND_2:NAND_01.A
+in1 => NAND_2:NAND_01.B
+in2 => NAND_2:NAND_02.A
+in2 => NAND_2:NAND_02.B
+out1 <= NAND_2:NAND_03.Y
+
+
+|TopLevel|DUT:dut_instance|Quiz:dut_instance|FA:\ADD:1:FA1|OR_PS:OR1|NAND_2:NAND_01
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|TopLevel|DUT:dut_instance|Quiz:dut_instance|FA:\ADD:1:FA1|OR_PS:OR1|NAND_2:NAND_02
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|TopLevel|DUT:dut_instance|Quiz:dut_instance|FA:\ADD:1:FA1|OR_PS:OR1|NAND_2:NAND_03
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|TopLevel|DUT:dut_instance|Quiz:dut_instance|FA:\ADD:2:FA1
+in1 => HA:HA_1.in1
+in2 => HA:HA_1.in2
+in3 => HA:HA_2.in2
+sum1 <= HA:HA_2.sum1
+car1 <= OR_PS:OR1.out1
+
+
+|TopLevel|DUT:dut_instance|Quiz:dut_instance|FA:\ADD:2:FA1|HA:HA_1
+in1 => XOR_PS:XOR1.in1
+in1 => AND_PS:AND1.in1
+in2 => XOR_PS:XOR1.in2
+in2 => AND_PS:AND1.in2
+sum1 <= XOR_PS:XOR1.out1
+car1 <= AND_PS:AND1.out1
+
+
+|TopLevel|DUT:dut_instance|Quiz:dut_instance|FA:\ADD:2:FA1|HA:HA_1|XOR_PS:XOR1
+in1 => NAND_2:NAND_02.A
+in1 => NAND_2:NAND_02.B
+in1 => NAND_2:NAND_03.A
+in2 => NAND_2:NAND_01.A
+in2 => NAND_2:NAND_01.B
+in2 => NAND_2:NAND_04.B
+out1 <= NAND_2:NAND_05.Y
+
+
+|TopLevel|DUT:dut_instance|Quiz:dut_instance|FA:\ADD:2:FA1|HA:HA_1|XOR_PS:XOR1|NAND_2:NAND_01
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|TopLevel|DUT:dut_instance|Quiz:dut_instance|FA:\ADD:2:FA1|HA:HA_1|XOR_PS:XOR1|NAND_2:NAND_02
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|TopLevel|DUT:dut_instance|Quiz:dut_instance|FA:\ADD:2:FA1|HA:HA_1|XOR_PS:XOR1|NAND_2:NAND_03
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|TopLevel|DUT:dut_instance|Quiz:dut_instance|FA:\ADD:2:FA1|HA:HA_1|XOR_PS:XOR1|NAND_2:NAND_04
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|TopLevel|DUT:dut_instance|Quiz:dut_instance|FA:\ADD:2:FA1|HA:HA_1|XOR_PS:XOR1|NAND_2:NAND_05
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|TopLevel|DUT:dut_instance|Quiz:dut_instance|FA:\ADD:2:FA1|HA:HA_1|AND_PS:AND1
+in1 => NAND_2:NAND_01.A
+in2 => NAND_2:NAND_01.B
+out1 <= NAND_2:NAND_02.Y
+
+
+|TopLevel|DUT:dut_instance|Quiz:dut_instance|FA:\ADD:2:FA1|HA:HA_1|AND_PS:AND1|NAND_2:NAND_01
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|TopLevel|DUT:dut_instance|Quiz:dut_instance|FA:\ADD:2:FA1|HA:HA_1|AND_PS:AND1|NAND_2:NAND_02
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|TopLevel|DUT:dut_instance|Quiz:dut_instance|FA:\ADD:2:FA1|HA:HA_2
+in1 => XOR_PS:XOR1.in1
+in1 => AND_PS:AND1.in1
+in2 => XOR_PS:XOR1.in2
+in2 => AND_PS:AND1.in2
+sum1 <= XOR_PS:XOR1.out1
+car1 <= AND_PS:AND1.out1
+
+
+|TopLevel|DUT:dut_instance|Quiz:dut_instance|FA:\ADD:2:FA1|HA:HA_2|XOR_PS:XOR1
+in1 => NAND_2:NAND_02.A
+in1 => NAND_2:NAND_02.B
+in1 => NAND_2:NAND_03.A
+in2 => NAND_2:NAND_01.A
+in2 => NAND_2:NAND_01.B
+in2 => NAND_2:NAND_04.B
+out1 <= NAND_2:NAND_05.Y
+
+
+|TopLevel|DUT:dut_instance|Quiz:dut_instance|FA:\ADD:2:FA1|HA:HA_2|XOR_PS:XOR1|NAND_2:NAND_01
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|TopLevel|DUT:dut_instance|Quiz:dut_instance|FA:\ADD:2:FA1|HA:HA_2|XOR_PS:XOR1|NAND_2:NAND_02
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|TopLevel|DUT:dut_instance|Quiz:dut_instance|FA:\ADD:2:FA1|HA:HA_2|XOR_PS:XOR1|NAND_2:NAND_03
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|TopLevel|DUT:dut_instance|Quiz:dut_instance|FA:\ADD:2:FA1|HA:HA_2|XOR_PS:XOR1|NAND_2:NAND_04
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|TopLevel|DUT:dut_instance|Quiz:dut_instance|FA:\ADD:2:FA1|HA:HA_2|XOR_PS:XOR1|NAND_2:NAND_05
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|TopLevel|DUT:dut_instance|Quiz:dut_instance|FA:\ADD:2:FA1|HA:HA_2|AND_PS:AND1
+in1 => NAND_2:NAND_01.A
+in2 => NAND_2:NAND_01.B
+out1 <= NAND_2:NAND_02.Y
+
+
+|TopLevel|DUT:dut_instance|Quiz:dut_instance|FA:\ADD:2:FA1|HA:HA_2|AND_PS:AND1|NAND_2:NAND_01
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|TopLevel|DUT:dut_instance|Quiz:dut_instance|FA:\ADD:2:FA1|HA:HA_2|AND_PS:AND1|NAND_2:NAND_02
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|TopLevel|DUT:dut_instance|Quiz:dut_instance|FA:\ADD:2:FA1|OR_PS:OR1
+in1 => NAND_2:NAND_01.A
+in1 => NAND_2:NAND_01.B
+in2 => NAND_2:NAND_02.A
+in2 => NAND_2:NAND_02.B
+out1 <= NAND_2:NAND_03.Y
+
+
+|TopLevel|DUT:dut_instance|Quiz:dut_instance|FA:\ADD:2:FA1|OR_PS:OR1|NAND_2:NAND_01
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|TopLevel|DUT:dut_instance|Quiz:dut_instance|FA:\ADD:2:FA1|OR_PS:OR1|NAND_2:NAND_02
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|TopLevel|DUT:dut_instance|Quiz:dut_instance|FA:\ADD:2:FA1|OR_PS:OR1|NAND_2:NAND_03
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|TopLevel|DUT:dut_instance|Quiz:dut_instance|FA:\ADD:3:FA1
+in1 => HA:HA_1.in1
+in2 => HA:HA_1.in2
+in3 => HA:HA_2.in2
+sum1 <= HA:HA_2.sum1
+car1 <= OR_PS:OR1.out1
+
+
+|TopLevel|DUT:dut_instance|Quiz:dut_instance|FA:\ADD:3:FA1|HA:HA_1
+in1 => XOR_PS:XOR1.in1
+in1 => AND_PS:AND1.in1
+in2 => XOR_PS:XOR1.in2
+in2 => AND_PS:AND1.in2
+sum1 <= XOR_PS:XOR1.out1
+car1 <= AND_PS:AND1.out1
+
+
+|TopLevel|DUT:dut_instance|Quiz:dut_instance|FA:\ADD:3:FA1|HA:HA_1|XOR_PS:XOR1
+in1 => NAND_2:NAND_02.A
+in1 => NAND_2:NAND_02.B
+in1 => NAND_2:NAND_03.A
+in2 => NAND_2:NAND_01.A
+in2 => NAND_2:NAND_01.B
+in2 => NAND_2:NAND_04.B
+out1 <= NAND_2:NAND_05.Y
+
+
+|TopLevel|DUT:dut_instance|Quiz:dut_instance|FA:\ADD:3:FA1|HA:HA_1|XOR_PS:XOR1|NAND_2:NAND_01
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|TopLevel|DUT:dut_instance|Quiz:dut_instance|FA:\ADD:3:FA1|HA:HA_1|XOR_PS:XOR1|NAND_2:NAND_02
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|TopLevel|DUT:dut_instance|Quiz:dut_instance|FA:\ADD:3:FA1|HA:HA_1|XOR_PS:XOR1|NAND_2:NAND_03
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|TopLevel|DUT:dut_instance|Quiz:dut_instance|FA:\ADD:3:FA1|HA:HA_1|XOR_PS:XOR1|NAND_2:NAND_04
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|TopLevel|DUT:dut_instance|Quiz:dut_instance|FA:\ADD:3:FA1|HA:HA_1|XOR_PS:XOR1|NAND_2:NAND_05
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|TopLevel|DUT:dut_instance|Quiz:dut_instance|FA:\ADD:3:FA1|HA:HA_1|AND_PS:AND1
+in1 => NAND_2:NAND_01.A
+in2 => NAND_2:NAND_01.B
+out1 <= NAND_2:NAND_02.Y
+
+
+|TopLevel|DUT:dut_instance|Quiz:dut_instance|FA:\ADD:3:FA1|HA:HA_1|AND_PS:AND1|NAND_2:NAND_01
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|TopLevel|DUT:dut_instance|Quiz:dut_instance|FA:\ADD:3:FA1|HA:HA_1|AND_PS:AND1|NAND_2:NAND_02
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|TopLevel|DUT:dut_instance|Quiz:dut_instance|FA:\ADD:3:FA1|HA:HA_2
+in1 => XOR_PS:XOR1.in1
+in1 => AND_PS:AND1.in1
+in2 => XOR_PS:XOR1.in2
+in2 => AND_PS:AND1.in2
+sum1 <= XOR_PS:XOR1.out1
+car1 <= AND_PS:AND1.out1
+
+
+|TopLevel|DUT:dut_instance|Quiz:dut_instance|FA:\ADD:3:FA1|HA:HA_2|XOR_PS:XOR1
+in1 => NAND_2:NAND_02.A
+in1 => NAND_2:NAND_02.B
+in1 => NAND_2:NAND_03.A
+in2 => NAND_2:NAND_01.A
+in2 => NAND_2:NAND_01.B
+in2 => NAND_2:NAND_04.B
+out1 <= NAND_2:NAND_05.Y
+
+
+|TopLevel|DUT:dut_instance|Quiz:dut_instance|FA:\ADD:3:FA1|HA:HA_2|XOR_PS:XOR1|NAND_2:NAND_01
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|TopLevel|DUT:dut_instance|Quiz:dut_instance|FA:\ADD:3:FA1|HA:HA_2|XOR_PS:XOR1|NAND_2:NAND_02
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|TopLevel|DUT:dut_instance|Quiz:dut_instance|FA:\ADD:3:FA1|HA:HA_2|XOR_PS:XOR1|NAND_2:NAND_03
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|TopLevel|DUT:dut_instance|Quiz:dut_instance|FA:\ADD:3:FA1|HA:HA_2|XOR_PS:XOR1|NAND_2:NAND_04
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|TopLevel|DUT:dut_instance|Quiz:dut_instance|FA:\ADD:3:FA1|HA:HA_2|XOR_PS:XOR1|NAND_2:NAND_05
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|TopLevel|DUT:dut_instance|Quiz:dut_instance|FA:\ADD:3:FA1|HA:HA_2|AND_PS:AND1
+in1 => NAND_2:NAND_01.A
+in2 => NAND_2:NAND_01.B
+out1 <= NAND_2:NAND_02.Y
+
+
+|TopLevel|DUT:dut_instance|Quiz:dut_instance|FA:\ADD:3:FA1|HA:HA_2|AND_PS:AND1|NAND_2:NAND_01
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|TopLevel|DUT:dut_instance|Quiz:dut_instance|FA:\ADD:3:FA1|HA:HA_2|AND_PS:AND1|NAND_2:NAND_02
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|TopLevel|DUT:dut_instance|Quiz:dut_instance|FA:\ADD:3:FA1|OR_PS:OR1
+in1 => NAND_2:NAND_01.A
+in1 => NAND_2:NAND_01.B
+in2 => NAND_2:NAND_02.A
+in2 => NAND_2:NAND_02.B
+out1 <= NAND_2:NAND_03.Y
+
+
+|TopLevel|DUT:dut_instance|Quiz:dut_instance|FA:\ADD:3:FA1|OR_PS:OR1|NAND_2:NAND_01
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|TopLevel|DUT:dut_instance|Quiz:dut_instance|FA:\ADD:3:FA1|OR_PS:OR1|NAND_2:NAND_02
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|TopLevel|DUT:dut_instance|Quiz:dut_instance|FA:\ADD:3:FA1|OR_PS:OR1|NAND_2:NAND_03
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|TopLevel|DUT:dut_instance|Quiz:dut_instance|FA:\ADD:4:FA1
+in1 => HA:HA_1.in1
+in2 => HA:HA_1.in2
+in3 => HA:HA_2.in2
+sum1 <= HA:HA_2.sum1
+car1 <= OR_PS:OR1.out1
+
+
+|TopLevel|DUT:dut_instance|Quiz:dut_instance|FA:\ADD:4:FA1|HA:HA_1
+in1 => XOR_PS:XOR1.in1
+in1 => AND_PS:AND1.in1
+in2 => XOR_PS:XOR1.in2
+in2 => AND_PS:AND1.in2
+sum1 <= XOR_PS:XOR1.out1
+car1 <= AND_PS:AND1.out1
+
+
+|TopLevel|DUT:dut_instance|Quiz:dut_instance|FA:\ADD:4:FA1|HA:HA_1|XOR_PS:XOR1
+in1 => NAND_2:NAND_02.A
+in1 => NAND_2:NAND_02.B
+in1 => NAND_2:NAND_03.A
+in2 => NAND_2:NAND_01.A
+in2 => NAND_2:NAND_01.B
+in2 => NAND_2:NAND_04.B
+out1 <= NAND_2:NAND_05.Y
+
+
+|TopLevel|DUT:dut_instance|Quiz:dut_instance|FA:\ADD:4:FA1|HA:HA_1|XOR_PS:XOR1|NAND_2:NAND_01
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|TopLevel|DUT:dut_instance|Quiz:dut_instance|FA:\ADD:4:FA1|HA:HA_1|XOR_PS:XOR1|NAND_2:NAND_02
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|TopLevel|DUT:dut_instance|Quiz:dut_instance|FA:\ADD:4:FA1|HA:HA_1|XOR_PS:XOR1|NAND_2:NAND_03
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|TopLevel|DUT:dut_instance|Quiz:dut_instance|FA:\ADD:4:FA1|HA:HA_1|XOR_PS:XOR1|NAND_2:NAND_04
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|TopLevel|DUT:dut_instance|Quiz:dut_instance|FA:\ADD:4:FA1|HA:HA_1|XOR_PS:XOR1|NAND_2:NAND_05
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|TopLevel|DUT:dut_instance|Quiz:dut_instance|FA:\ADD:4:FA1|HA:HA_1|AND_PS:AND1
+in1 => NAND_2:NAND_01.A
+in2 => NAND_2:NAND_01.B
+out1 <= NAND_2:NAND_02.Y
+
+
+|TopLevel|DUT:dut_instance|Quiz:dut_instance|FA:\ADD:4:FA1|HA:HA_1|AND_PS:AND1|NAND_2:NAND_01
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|TopLevel|DUT:dut_instance|Quiz:dut_instance|FA:\ADD:4:FA1|HA:HA_1|AND_PS:AND1|NAND_2:NAND_02
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|TopLevel|DUT:dut_instance|Quiz:dut_instance|FA:\ADD:4:FA1|HA:HA_2
+in1 => XOR_PS:XOR1.in1
+in1 => AND_PS:AND1.in1
+in2 => XOR_PS:XOR1.in2
+in2 => AND_PS:AND1.in2
+sum1 <= XOR_PS:XOR1.out1
+car1 <= AND_PS:AND1.out1
+
+
+|TopLevel|DUT:dut_instance|Quiz:dut_instance|FA:\ADD:4:FA1|HA:HA_2|XOR_PS:XOR1
+in1 => NAND_2:NAND_02.A
+in1 => NAND_2:NAND_02.B
+in1 => NAND_2:NAND_03.A
+in2 => NAND_2:NAND_01.A
+in2 => NAND_2:NAND_01.B
+in2 => NAND_2:NAND_04.B
+out1 <= NAND_2:NAND_05.Y
+
+
+|TopLevel|DUT:dut_instance|Quiz:dut_instance|FA:\ADD:4:FA1|HA:HA_2|XOR_PS:XOR1|NAND_2:NAND_01
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|TopLevel|DUT:dut_instance|Quiz:dut_instance|FA:\ADD:4:FA1|HA:HA_2|XOR_PS:XOR1|NAND_2:NAND_02
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|TopLevel|DUT:dut_instance|Quiz:dut_instance|FA:\ADD:4:FA1|HA:HA_2|XOR_PS:XOR1|NAND_2:NAND_03
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|TopLevel|DUT:dut_instance|Quiz:dut_instance|FA:\ADD:4:FA1|HA:HA_2|XOR_PS:XOR1|NAND_2:NAND_04
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|TopLevel|DUT:dut_instance|Quiz:dut_instance|FA:\ADD:4:FA1|HA:HA_2|XOR_PS:XOR1|NAND_2:NAND_05
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|TopLevel|DUT:dut_instance|Quiz:dut_instance|FA:\ADD:4:FA1|HA:HA_2|AND_PS:AND1
+in1 => NAND_2:NAND_01.A
+in2 => NAND_2:NAND_01.B
+out1 <= NAND_2:NAND_02.Y
+
+
+|TopLevel|DUT:dut_instance|Quiz:dut_instance|FA:\ADD:4:FA1|HA:HA_2|AND_PS:AND1|NAND_2:NAND_01
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|TopLevel|DUT:dut_instance|Quiz:dut_instance|FA:\ADD:4:FA1|HA:HA_2|AND_PS:AND1|NAND_2:NAND_02
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|TopLevel|DUT:dut_instance|Quiz:dut_instance|FA:\ADD:4:FA1|OR_PS:OR1
+in1 => NAND_2:NAND_01.A
+in1 => NAND_2:NAND_01.B
+in2 => NAND_2:NAND_02.A
+in2 => NAND_2:NAND_02.B
+out1 <= NAND_2:NAND_03.Y
+
+
+|TopLevel|DUT:dut_instance|Quiz:dut_instance|FA:\ADD:4:FA1|OR_PS:OR1|NAND_2:NAND_01
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|TopLevel|DUT:dut_instance|Quiz:dut_instance|FA:\ADD:4:FA1|OR_PS:OR1|NAND_2:NAND_02
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|TopLevel|DUT:dut_instance|Quiz:dut_instance|FA:\ADD:4:FA1|OR_PS:OR1|NAND_2:NAND_03
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|TopLevel|DUT:dut_instance|Quiz:dut_instance|FA:\ADD:5:FA1
+in1 => HA:HA_1.in1
+in2 => HA:HA_1.in2
+in3 => HA:HA_2.in2
+sum1 <= HA:HA_2.sum1
+car1 <= OR_PS:OR1.out1
+
+
+|TopLevel|DUT:dut_instance|Quiz:dut_instance|FA:\ADD:5:FA1|HA:HA_1
+in1 => XOR_PS:XOR1.in1
+in1 => AND_PS:AND1.in1
+in2 => XOR_PS:XOR1.in2
+in2 => AND_PS:AND1.in2
+sum1 <= XOR_PS:XOR1.out1
+car1 <= AND_PS:AND1.out1
+
+
+|TopLevel|DUT:dut_instance|Quiz:dut_instance|FA:\ADD:5:FA1|HA:HA_1|XOR_PS:XOR1
+in1 => NAND_2:NAND_02.A
+in1 => NAND_2:NAND_02.B
+in1 => NAND_2:NAND_03.A
+in2 => NAND_2:NAND_01.A
+in2 => NAND_2:NAND_01.B
+in2 => NAND_2:NAND_04.B
+out1 <= NAND_2:NAND_05.Y
+
+
+|TopLevel|DUT:dut_instance|Quiz:dut_instance|FA:\ADD:5:FA1|HA:HA_1|XOR_PS:XOR1|NAND_2:NAND_01
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|TopLevel|DUT:dut_instance|Quiz:dut_instance|FA:\ADD:5:FA1|HA:HA_1|XOR_PS:XOR1|NAND_2:NAND_02
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|TopLevel|DUT:dut_instance|Quiz:dut_instance|FA:\ADD:5:FA1|HA:HA_1|XOR_PS:XOR1|NAND_2:NAND_03
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|TopLevel|DUT:dut_instance|Quiz:dut_instance|FA:\ADD:5:FA1|HA:HA_1|XOR_PS:XOR1|NAND_2:NAND_04
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|TopLevel|DUT:dut_instance|Quiz:dut_instance|FA:\ADD:5:FA1|HA:HA_1|XOR_PS:XOR1|NAND_2:NAND_05
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|TopLevel|DUT:dut_instance|Quiz:dut_instance|FA:\ADD:5:FA1|HA:HA_1|AND_PS:AND1
+in1 => NAND_2:NAND_01.A
+in2 => NAND_2:NAND_01.B
+out1 <= NAND_2:NAND_02.Y
+
+
+|TopLevel|DUT:dut_instance|Quiz:dut_instance|FA:\ADD:5:FA1|HA:HA_1|AND_PS:AND1|NAND_2:NAND_01
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|TopLevel|DUT:dut_instance|Quiz:dut_instance|FA:\ADD:5:FA1|HA:HA_1|AND_PS:AND1|NAND_2:NAND_02
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|TopLevel|DUT:dut_instance|Quiz:dut_instance|FA:\ADD:5:FA1|HA:HA_2
+in1 => XOR_PS:XOR1.in1
+in1 => AND_PS:AND1.in1
+in2 => XOR_PS:XOR1.in2
+in2 => AND_PS:AND1.in2
+sum1 <= XOR_PS:XOR1.out1
+car1 <= AND_PS:AND1.out1
+
+
+|TopLevel|DUT:dut_instance|Quiz:dut_instance|FA:\ADD:5:FA1|HA:HA_2|XOR_PS:XOR1
+in1 => NAND_2:NAND_02.A
+in1 => NAND_2:NAND_02.B
+in1 => NAND_2:NAND_03.A
+in2 => NAND_2:NAND_01.A
+in2 => NAND_2:NAND_01.B
+in2 => NAND_2:NAND_04.B
+out1 <= NAND_2:NAND_05.Y
+
+
+|TopLevel|DUT:dut_instance|Quiz:dut_instance|FA:\ADD:5:FA1|HA:HA_2|XOR_PS:XOR1|NAND_2:NAND_01
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|TopLevel|DUT:dut_instance|Quiz:dut_instance|FA:\ADD:5:FA1|HA:HA_2|XOR_PS:XOR1|NAND_2:NAND_02
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|TopLevel|DUT:dut_instance|Quiz:dut_instance|FA:\ADD:5:FA1|HA:HA_2|XOR_PS:XOR1|NAND_2:NAND_03
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|TopLevel|DUT:dut_instance|Quiz:dut_instance|FA:\ADD:5:FA1|HA:HA_2|XOR_PS:XOR1|NAND_2:NAND_04
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|TopLevel|DUT:dut_instance|Quiz:dut_instance|FA:\ADD:5:FA1|HA:HA_2|XOR_PS:XOR1|NAND_2:NAND_05
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|TopLevel|DUT:dut_instance|Quiz:dut_instance|FA:\ADD:5:FA1|HA:HA_2|AND_PS:AND1
+in1 => NAND_2:NAND_01.A
+in2 => NAND_2:NAND_01.B
+out1 <= NAND_2:NAND_02.Y
+
+
+|TopLevel|DUT:dut_instance|Quiz:dut_instance|FA:\ADD:5:FA1|HA:HA_2|AND_PS:AND1|NAND_2:NAND_01
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|TopLevel|DUT:dut_instance|Quiz:dut_instance|FA:\ADD:5:FA1|HA:HA_2|AND_PS:AND1|NAND_2:NAND_02
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|TopLevel|DUT:dut_instance|Quiz:dut_instance|FA:\ADD:5:FA1|OR_PS:OR1
+in1 => NAND_2:NAND_01.A
+in1 => NAND_2:NAND_01.B
+in2 => NAND_2:NAND_02.A
+in2 => NAND_2:NAND_02.B
+out1 <= NAND_2:NAND_03.Y
+
+
+|TopLevel|DUT:dut_instance|Quiz:dut_instance|FA:\ADD:5:FA1|OR_PS:OR1|NAND_2:NAND_01
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|TopLevel|DUT:dut_instance|Quiz:dut_instance|FA:\ADD:5:FA1|OR_PS:OR1|NAND_2:NAND_02
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|TopLevel|DUT:dut_instance|Quiz:dut_instance|FA:\ADD:5:FA1|OR_PS:OR1|NAND_2:NAND_03
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|TopLevel|DUT:dut_instance|Quiz:dut_instance|FA:\ADD:6:FA1
+in1 => HA:HA_1.in1
+in2 => HA:HA_1.in2
+in3 => HA:HA_2.in2
+sum1 <= HA:HA_2.sum1
+car1 <= OR_PS:OR1.out1
+
+
+|TopLevel|DUT:dut_instance|Quiz:dut_instance|FA:\ADD:6:FA1|HA:HA_1
+in1 => XOR_PS:XOR1.in1
+in1 => AND_PS:AND1.in1
+in2 => XOR_PS:XOR1.in2
+in2 => AND_PS:AND1.in2
+sum1 <= XOR_PS:XOR1.out1
+car1 <= AND_PS:AND1.out1
+
+
+|TopLevel|DUT:dut_instance|Quiz:dut_instance|FA:\ADD:6:FA1|HA:HA_1|XOR_PS:XOR1
+in1 => NAND_2:NAND_02.A
+in1 => NAND_2:NAND_02.B
+in1 => NAND_2:NAND_03.A
+in2 => NAND_2:NAND_01.A
+in2 => NAND_2:NAND_01.B
+in2 => NAND_2:NAND_04.B
+out1 <= NAND_2:NAND_05.Y
+
+
+|TopLevel|DUT:dut_instance|Quiz:dut_instance|FA:\ADD:6:FA1|HA:HA_1|XOR_PS:XOR1|NAND_2:NAND_01
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|TopLevel|DUT:dut_instance|Quiz:dut_instance|FA:\ADD:6:FA1|HA:HA_1|XOR_PS:XOR1|NAND_2:NAND_02
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|TopLevel|DUT:dut_instance|Quiz:dut_instance|FA:\ADD:6:FA1|HA:HA_1|XOR_PS:XOR1|NAND_2:NAND_03
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|TopLevel|DUT:dut_instance|Quiz:dut_instance|FA:\ADD:6:FA1|HA:HA_1|XOR_PS:XOR1|NAND_2:NAND_04
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|TopLevel|DUT:dut_instance|Quiz:dut_instance|FA:\ADD:6:FA1|HA:HA_1|XOR_PS:XOR1|NAND_2:NAND_05
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|TopLevel|DUT:dut_instance|Quiz:dut_instance|FA:\ADD:6:FA1|HA:HA_1|AND_PS:AND1
+in1 => NAND_2:NAND_01.A
+in2 => NAND_2:NAND_01.B
+out1 <= NAND_2:NAND_02.Y
+
+
+|TopLevel|DUT:dut_instance|Quiz:dut_instance|FA:\ADD:6:FA1|HA:HA_1|AND_PS:AND1|NAND_2:NAND_01
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|TopLevel|DUT:dut_instance|Quiz:dut_instance|FA:\ADD:6:FA1|HA:HA_1|AND_PS:AND1|NAND_2:NAND_02
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|TopLevel|DUT:dut_instance|Quiz:dut_instance|FA:\ADD:6:FA1|HA:HA_2
+in1 => XOR_PS:XOR1.in1
+in1 => AND_PS:AND1.in1
+in2 => XOR_PS:XOR1.in2
+in2 => AND_PS:AND1.in2
+sum1 <= XOR_PS:XOR1.out1
+car1 <= AND_PS:AND1.out1
+
+
+|TopLevel|DUT:dut_instance|Quiz:dut_instance|FA:\ADD:6:FA1|HA:HA_2|XOR_PS:XOR1
+in1 => NAND_2:NAND_02.A
+in1 => NAND_2:NAND_02.B
+in1 => NAND_2:NAND_03.A
+in2 => NAND_2:NAND_01.A
+in2 => NAND_2:NAND_01.B
+in2 => NAND_2:NAND_04.B
+out1 <= NAND_2:NAND_05.Y
+
+
+|TopLevel|DUT:dut_instance|Quiz:dut_instance|FA:\ADD:6:FA1|HA:HA_2|XOR_PS:XOR1|NAND_2:NAND_01
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|TopLevel|DUT:dut_instance|Quiz:dut_instance|FA:\ADD:6:FA1|HA:HA_2|XOR_PS:XOR1|NAND_2:NAND_02
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|TopLevel|DUT:dut_instance|Quiz:dut_instance|FA:\ADD:6:FA1|HA:HA_2|XOR_PS:XOR1|NAND_2:NAND_03
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|TopLevel|DUT:dut_instance|Quiz:dut_instance|FA:\ADD:6:FA1|HA:HA_2|XOR_PS:XOR1|NAND_2:NAND_04
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|TopLevel|DUT:dut_instance|Quiz:dut_instance|FA:\ADD:6:FA1|HA:HA_2|XOR_PS:XOR1|NAND_2:NAND_05
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|TopLevel|DUT:dut_instance|Quiz:dut_instance|FA:\ADD:6:FA1|HA:HA_2|AND_PS:AND1
+in1 => NAND_2:NAND_01.A
+in2 => NAND_2:NAND_01.B
+out1 <= NAND_2:NAND_02.Y
+
+
+|TopLevel|DUT:dut_instance|Quiz:dut_instance|FA:\ADD:6:FA1|HA:HA_2|AND_PS:AND1|NAND_2:NAND_01
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|TopLevel|DUT:dut_instance|Quiz:dut_instance|FA:\ADD:6:FA1|HA:HA_2|AND_PS:AND1|NAND_2:NAND_02
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|TopLevel|DUT:dut_instance|Quiz:dut_instance|FA:\ADD:6:FA1|OR_PS:OR1
+in1 => NAND_2:NAND_01.A
+in1 => NAND_2:NAND_01.B
+in2 => NAND_2:NAND_02.A
+in2 => NAND_2:NAND_02.B
+out1 <= NAND_2:NAND_03.Y
+
+
+|TopLevel|DUT:dut_instance|Quiz:dut_instance|FA:\ADD:6:FA1|OR_PS:OR1|NAND_2:NAND_01
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|TopLevel|DUT:dut_instance|Quiz:dut_instance|FA:\ADD:6:FA1|OR_PS:OR1|NAND_2:NAND_02
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|TopLevel|DUT:dut_instance|Quiz:dut_instance|FA:\ADD:6:FA1|OR_PS:OR1|NAND_2:NAND_03
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|TopLevel|DUT:dut_instance|Quiz:dut_instance|FA:FA2
+in1 => HA:HA_1.in1
+in2 => HA:HA_1.in2
+in3 => HA:HA_2.in2
+sum1 <= HA:HA_2.sum1
+car1 <= OR_PS:OR1.out1
+
+
+|TopLevel|DUT:dut_instance|Quiz:dut_instance|FA:FA2|HA:HA_1
+in1 => XOR_PS:XOR1.in1
+in1 => AND_PS:AND1.in1
+in2 => XOR_PS:XOR1.in2
+in2 => AND_PS:AND1.in2
+sum1 <= XOR_PS:XOR1.out1
+car1 <= AND_PS:AND1.out1
+
+
+|TopLevel|DUT:dut_instance|Quiz:dut_instance|FA:FA2|HA:HA_1|XOR_PS:XOR1
+in1 => NAND_2:NAND_02.A
+in1 => NAND_2:NAND_02.B
+in1 => NAND_2:NAND_03.A
+in2 => NAND_2:NAND_01.A
+in2 => NAND_2:NAND_01.B
+in2 => NAND_2:NAND_04.B
+out1 <= NAND_2:NAND_05.Y
+
+
+|TopLevel|DUT:dut_instance|Quiz:dut_instance|FA:FA2|HA:HA_1|XOR_PS:XOR1|NAND_2:NAND_01
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|TopLevel|DUT:dut_instance|Quiz:dut_instance|FA:FA2|HA:HA_1|XOR_PS:XOR1|NAND_2:NAND_02
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|TopLevel|DUT:dut_instance|Quiz:dut_instance|FA:FA2|HA:HA_1|XOR_PS:XOR1|NAND_2:NAND_03
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|TopLevel|DUT:dut_instance|Quiz:dut_instance|FA:FA2|HA:HA_1|XOR_PS:XOR1|NAND_2:NAND_04
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|TopLevel|DUT:dut_instance|Quiz:dut_instance|FA:FA2|HA:HA_1|XOR_PS:XOR1|NAND_2:NAND_05
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|TopLevel|DUT:dut_instance|Quiz:dut_instance|FA:FA2|HA:HA_1|AND_PS:AND1
+in1 => NAND_2:NAND_01.A
+in2 => NAND_2:NAND_01.B
+out1 <= NAND_2:NAND_02.Y
+
+
+|TopLevel|DUT:dut_instance|Quiz:dut_instance|FA:FA2|HA:HA_1|AND_PS:AND1|NAND_2:NAND_01
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|TopLevel|DUT:dut_instance|Quiz:dut_instance|FA:FA2|HA:HA_1|AND_PS:AND1|NAND_2:NAND_02
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|TopLevel|DUT:dut_instance|Quiz:dut_instance|FA:FA2|HA:HA_2
+in1 => XOR_PS:XOR1.in1
+in1 => AND_PS:AND1.in1
+in2 => XOR_PS:XOR1.in2
+in2 => AND_PS:AND1.in2
+sum1 <= XOR_PS:XOR1.out1
+car1 <= AND_PS:AND1.out1
+
+
+|TopLevel|DUT:dut_instance|Quiz:dut_instance|FA:FA2|HA:HA_2|XOR_PS:XOR1
+in1 => NAND_2:NAND_02.A
+in1 => NAND_2:NAND_02.B
+in1 => NAND_2:NAND_03.A
+in2 => NAND_2:NAND_01.A
+in2 => NAND_2:NAND_01.B
+in2 => NAND_2:NAND_04.B
+out1 <= NAND_2:NAND_05.Y
+
+
+|TopLevel|DUT:dut_instance|Quiz:dut_instance|FA:FA2|HA:HA_2|XOR_PS:XOR1|NAND_2:NAND_01
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|TopLevel|DUT:dut_instance|Quiz:dut_instance|FA:FA2|HA:HA_2|XOR_PS:XOR1|NAND_2:NAND_02
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|TopLevel|DUT:dut_instance|Quiz:dut_instance|FA:FA2|HA:HA_2|XOR_PS:XOR1|NAND_2:NAND_03
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|TopLevel|DUT:dut_instance|Quiz:dut_instance|FA:FA2|HA:HA_2|XOR_PS:XOR1|NAND_2:NAND_04
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|TopLevel|DUT:dut_instance|Quiz:dut_instance|FA:FA2|HA:HA_2|XOR_PS:XOR1|NAND_2:NAND_05
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|TopLevel|DUT:dut_instance|Quiz:dut_instance|FA:FA2|HA:HA_2|AND_PS:AND1
+in1 => NAND_2:NAND_01.A
+in2 => NAND_2:NAND_01.B
+out1 <= NAND_2:NAND_02.Y
+
+
+|TopLevel|DUT:dut_instance|Quiz:dut_instance|FA:FA2|HA:HA_2|AND_PS:AND1|NAND_2:NAND_01
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|TopLevel|DUT:dut_instance|Quiz:dut_instance|FA:FA2|HA:HA_2|AND_PS:AND1|NAND_2:NAND_02
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|TopLevel|DUT:dut_instance|Quiz:dut_instance|FA:FA2|OR_PS:OR1
+in1 => NAND_2:NAND_01.A
+in1 => NAND_2:NAND_01.B
+in2 => NAND_2:NAND_02.A
+in2 => NAND_2:NAND_02.B
+out1 <= NAND_2:NAND_03.Y
+
+
+|TopLevel|DUT:dut_instance|Quiz:dut_instance|FA:FA2|OR_PS:OR1|NAND_2:NAND_01
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|TopLevel|DUT:dut_instance|Quiz:dut_instance|FA:FA2|OR_PS:OR1|NAND_2:NAND_02
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|TopLevel|DUT:dut_instance|Quiz:dut_instance|FA:FA2|OR_PS:OR1|NAND_2:NAND_03
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+

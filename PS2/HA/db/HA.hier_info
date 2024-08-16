@@ -1,0 +1,74 @@
+|DUT
+input_vector[0] => HA:dut_instance.in2
+input_vector[1] => HA:dut_instance.in1
+output_vector[0] << HA:dut_instance.car1
+output_vector[1] << HA:dut_instance.sum1
+
+
+|DUT|HA:dut_instance
+in1 => XOR_PS:XOR1.in1
+in1 => AND_PS:AND1.in1
+in2 => XOR_PS:XOR1.in2
+in2 => AND_PS:AND1.in2
+sum1 <= XOR_PS:XOR1.out1
+car1 <= AND_PS:AND1.out1
+
+
+|DUT|HA:dut_instance|XOR_PS:XOR1
+in1 => NAND_2:NAND_02.A
+in1 => NAND_2:NAND_02.B
+in1 => NAND_2:NAND_03.A
+in2 => NAND_2:NAND_01.A
+in2 => NAND_2:NAND_01.B
+in2 => NAND_2:NAND_04.B
+out1 <= NAND_2:NAND_05.Y
+
+
+|DUT|HA:dut_instance|XOR_PS:XOR1|NAND_2:NAND_01
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|HA:dut_instance|XOR_PS:XOR1|NAND_2:NAND_02
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|HA:dut_instance|XOR_PS:XOR1|NAND_2:NAND_03
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|HA:dut_instance|XOR_PS:XOR1|NAND_2:NAND_04
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|HA:dut_instance|XOR_PS:XOR1|NAND_2:NAND_05
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|HA:dut_instance|AND_PS:AND1
+in1 => NAND_2:NAND_01.A
+in2 => NAND_2:NAND_01.B
+out1 <= NAND_2:NAND_02.Y
+
+
+|DUT|HA:dut_instance|AND_PS:AND1|NAND_2:NAND_01
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|DUT|HA:dut_instance|AND_PS:AND1|NAND_2:NAND_02
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+

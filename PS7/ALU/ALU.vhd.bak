@@ -1,0 +1,54 @@
+library ieee;
+ use ieee.std_logic_1164.all;
+library work;
+use work.Gates.all;
+ 
+ entity ALU is
+ port ( A: in std_logic_vector(3 downto 0);
+		  B: in std_logic_vector(3 downto 0);
+		sel: in std_logic_vector(1 downto 0);
+		 op: out std_logic_vector(7 downto 0)
+		) ;
+ 
+ end ALU;
+ 
+ architecture a1 of alu_beh is
+ 
+component FOURBIT_AS is
+	port ( A0, A1, A2, A3, B0, B1, B2, B3, M : in std_logic ;
+			 S0, S1, S2, S3, COUT : out std_logic );
+end component;
+
+component SHIFTR is
+port (
+        a : in std_logic_vector(7 downto 0);
+        b : in std_logic_vector(2 downto 0);
+        l : in std_logic;
+        s : out std_logic_vector(7 downto 0)
+    );
+end component;
+ 
+ begin
+ 
+	process( A, B, sel )
+ begin
+		case sel is
+			when "00" =>
+				op(7 downto 4) <= A(3 downto 0);
+				op(3 downto 0) <= B(3 downto 0);
+			when "01" =>
+				FS : FOURBIT_AS port map( A0 => A(0), A1 => A(1), A2 => A(2), A3 => A(3),
+												  B0 => B(0), B1 => B(1), B2 => B(2), B3 => B(3), M => '1',
+												  COUT => op(4), s3 => op(3), s2 => op(2), s1 => op(1), s0 => op(0));
+				op <= (others => '0');
+			when "10" =>
+				x1 : XOR_2 port map( A => A(0), B => B(0), Y => op(0));
+				x2 : XOR_2 port map( A => A(1), B => B(1), Y => op(1));
+				x3 : XOR_2 port map( A => A(2), B => B(2), Y => op(2));
+				x4 : XOR_2 port map( A => A(3), B => B(3), Y => op(3));
+				op <= (others => '0');
+			when others =>
+				shift : bit_reversal port map( a(3 downto 0) => A(3 downto 0), l => B(3), B(2) => '0', B(1 downto 0) => b(1 downto 0),s => op);
+			end case;
+ end process;--alu
+ end a1 ;-- a1

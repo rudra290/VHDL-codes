@@ -1,0 +1,216 @@
+m255
+K4
+z2
+!s11e vcom 2020.1 2020.02, Feb 28 2020
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 dC:/Users/rudra/VHDL Codes/PS21/MUX44_1/simulation/modelsim
+Edut
+Z1 w1717497266
+Z2 DPx3 std 6 textio 0 22 zE1`LPoLg^DX3Oz^4Fj1K3
+Z3 DPx4 ieee 14 std_logic_1164 0 22 cVAk:aDinOX8^VGI1ekP<3
+!i122 2
+R0
+Z4 8C:/Users/rudra/VHDL Codes/PS21/MUX44_1/DUT.vhdl
+Z5 FC:/Users/rudra/VHDL Codes/PS21/MUX44_1/DUT.vhdl
+l0
+L8 1
+VPzkg^LLc;ZD=2GheGX>XI2
+!s100 n3lF0HmEcojUjOHGGlh[V2
+Z6 OV;C;2020.1;71
+31
+Z7 !s110 1717586528
+!i10b 1
+Z8 !s108 1717586528.000000
+Z9 !s90 -reportprogress|300|-93|-work|work|C:/Users/rudra/VHDL Codes/PS21/MUX44_1/DUT.vhdl|
+Z10 !s107 C:/Users/rudra/VHDL Codes/PS21/MUX44_1/DUT.vhdl|
+!i113 1
+Z11 o-93 -work work
+Z12 tExplicit 1 CvgOpt 0
+Adutwrap
+R2
+R3
+DEx4 work 3 dut 0 22 Pzkg^LLc;ZD=2GheGX>XI2
+!i122 2
+l25
+L13 24
+VHA=_9_IT:aIhY31ZAG9Y]0
+!s100 IaeKlh>e3EPidf993bK5;1
+R6
+31
+R7
+!i10b 1
+R8
+R9
+R10
+!i113 1
+R11
+R12
+Emux2_1
+Z13 w1717491631
+R2
+R3
+!i122 1
+R0
+Z14 8C:/Users/rudra/VHDL Codes/PS21/MUX44_1/MUX2_1.vhd
+Z15 FC:/Users/rudra/VHDL Codes/PS21/MUX44_1/MUX2_1.vhd
+l0
+L4 1
+V]QPbVXP@db66Q@e9GdhT81
+!s100 9H`jJGgGVQHBLoCc9Zk`<3
+R6
+31
+R7
+!i10b 1
+R8
+Z16 !s90 -reportprogress|300|-93|-work|work|C:/Users/rudra/VHDL Codes/PS21/MUX44_1/MUX2_1.vhd|
+Z17 !s107 C:/Users/rudra/VHDL Codes/PS21/MUX44_1/MUX2_1.vhd|
+!i113 1
+R11
+R12
+Abody1
+R2
+R3
+DEx4 work 6 mux2_1 0 22 ]QPbVXP@db66Q@e9GdhT81
+!i122 1
+l12
+L11 11
+VA54R[Q:oh7b44^68P<_JC0
+!s100 LR]llk<`9CNLYHh?Q^k3o1
+R6
+31
+R7
+!i10b 1
+R8
+R16
+R17
+!i113 1
+R11
+R12
+Emux44_1
+Z18 w1717497863
+R2
+R3
+!i122 3
+R0
+Z19 8C:/Users/rudra/VHDL Codes/PS21/MUX44_1/MUX44_1.vhd
+Z20 FC:/Users/rudra/VHDL Codes/PS21/MUX44_1/MUX44_1.vhd
+l0
+L4 1
+VYg=C4`RNjfKKn1CijYPD52
+!s100 gfe?kLOzA[;F^3=ETERbH3
+R6
+31
+R7
+!i10b 1
+R8
+Z21 !s90 -reportprogress|300|-93|-work|work|C:/Users/rudra/VHDL Codes/PS21/MUX44_1/MUX44_1.vhd|
+Z22 !s107 C:/Users/rudra/VHDL Codes/PS21/MUX44_1/MUX44_1.vhd|
+!i113 1
+R11
+R12
+Abody2
+R2
+R3
+DEx4 work 7 mux44_1 0 22 Yg=C4`RNjfKKn1CijYPD52
+!i122 3
+l18
+L13 11
+Vm9W49PRV4^Ol0U?50GA6B2
+!s100 @foMlzXJ9OF6ahV@_W`N43
+R6
+31
+R7
+!i10b 1
+R8
+R21
+R22
+!i113 1
+R11
+R12
+Emux4_1
+Z23 w1717493170
+R2
+R3
+!i122 0
+R0
+Z24 8C:/Users/rudra/VHDL Codes/PS21/MUX44_1/MUX4_1.vhd
+Z25 FC:/Users/rudra/VHDL Codes/PS21/MUX44_1/MUX4_1.vhd
+l0
+L4 1
+VISX<^<i[Y;JkT3:9Yd3GQ1
+!s100 iC1aY<?m>;iF>0DdE4<S@0
+R6
+31
+R7
+!i10b 1
+R8
+Z26 !s90 -reportprogress|300|-93|-work|work|C:/Users/rudra/VHDL Codes/PS21/MUX44_1/MUX4_1.vhd|
+Z27 !s107 C:/Users/rudra/VHDL Codes/PS21/MUX44_1/MUX4_1.vhd|
+!i113 1
+R11
+R12
+Abody1
+R2
+R3
+DEx4 work 6 mux4_1 0 22 ISX<^<i[Y;JkT3:9Yd3GQ1
+!i122 0
+l17
+L9 13
+Vf_H`zD=8jGLLa`TjE]]AR1
+!s100 N2zlRZzI[_YX8IUo=fBn_0
+R6
+31
+R7
+!i10b 1
+R8
+R26
+R27
+!i113 1
+R11
+R12
+Etestbench
+Z28 w1717494849
+R3
+R2
+!i122 4
+R0
+Z29 8C:/Users/rudra/VHDL Codes/PS21/MUX44_1/Testbench.vhdl
+Z30 FC:/Users/rudra/VHDL Codes/PS21/MUX44_1/Testbench.vhdl
+l0
+L7 1
+V]iKK_Z9L:G9B:i8c]3eFH0
+!s100 bWf8kl8zb90X@P1m>V^K20
+R6
+31
+R7
+!i10b 1
+R8
+Z31 !s90 -reportprogress|300|-93|-work|work|C:/Users/rudra/VHDL Codes/PS21/MUX44_1/Testbench.vhdl|
+!s107 C:/Users/rudra/VHDL Codes/PS21/MUX44_1/Testbench.vhdl|
+!i113 1
+R11
+R12
+Abehave
+R3
+R2
+DEx4 work 9 testbench 0 22 ]iKK_Z9L:G9B:i8c]3eFH0
+!i122 4
+l69
+L9 132
+VInC>WD8UaB]Z2aUEDfgch3
+!s100 g6MEgY0iOCg=e@:?]DY>D0
+R6
+31
+R7
+!i10b 1
+R8
+R31
+Z32 !s107 C:/Users/rudra/VHDL Codes/PS21/MUX44_1/Testbench.vhdl|
+!i113 1
+R11
+R12
